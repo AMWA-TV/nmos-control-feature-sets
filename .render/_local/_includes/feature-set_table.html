@@ -1,0 +1,17 @@
+<table style="text-align: center">
+	<thead>
+		<tr>
+      <th>Id</th>
+      <th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% assign feature_sets_to_show = site.data.feature_sets | where: "show_in_index", true %}
+		{% for feature_set in feature_sets_to_show %}
+		<tr>
+			<td><a href="{{ feature_set.id }}">{{ feature_set.id }}</a></td>
+			<td><a href="{{ feature_set.id }}">{{ feature_set.name }}</a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

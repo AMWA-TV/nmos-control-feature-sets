@@ -1,4 +1,4 @@
 ---
 ---
 
-{{ site.data.feature-sets | jsonify }}
+{{ site.data.feature_sets | jsonify }}
