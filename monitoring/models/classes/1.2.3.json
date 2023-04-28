@@ -1,0 +1,74 @@
+{
+  "description": "NcReceiverMonitor class descriptor",
+  "identity": [
+    1,
+    2,
+    3
+  ],
+  "name": "NcReceiverMonitor",
+  "fixedRole": null,
+  "properties": [
+    {
+      "description": "Connection status property",
+      "id": {
+        "level": 3,
+        "index": 1
+      },
+      "name": "connectionStatus",
+      "typeName": "NcConnectionStatus",
+      "isReadOnly": true,
+      "isPersistent": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": false
+    },
+    {
+      "description": "Connection status message property",
+      "id": {
+        "level": 3,
+        "index": 2
+      },
+      "name": "connectionStatusMessage",
+      "typeName": "NcString",
+      "isReadOnly": true,
+      "isPersistent": false,
+      "isNullable": true,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": false
+    },
+    {
+      "description": "Payload status property",
+      "id": {
+        "level": 3,
+        "index": 3
+      },
+      "name": "payloadStatus",
+      "typeName": "NcPayloadStatus",
+      "isReadOnly": true,
+      "isPersistent": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": false
+    },
+    {
+      "description": "Payload status message property",
+      "id": {
+        "level": 3,
+        "index": 4
+      },
+      "name": "payloadStatusMessage",
+      "typeName": "NcString",
+      "isReadOnly": true,
+      "isPersistent": false,
+      "isNullable": true,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": false
+    }
+  ],
+  "methods": [],
+  "events": []
+}

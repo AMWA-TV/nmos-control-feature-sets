@@ -1,0 +1,7 @@
+{
+    "description": "A ratio expressed in dB.",
+    "name": "NcDB",
+    "type": 1,
+    "parentType": "NcFloat32",
+    "isSequence": false
+}
