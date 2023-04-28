@@ -1,0 +1,29 @@
+{
+  "description": "NcIdentBeacon class descriptor",
+  "identity": [
+    1,
+    2,
+    2
+  ],
+  "name": "NcIdentBeacon",
+  "fixedRole": null,
+  "properties": [
+    {
+      "description": "Indicator active state",
+      "id": {
+        "level": 3,
+        "index": 1
+      },
+      "name": "active",
+      "typeName": "NcBoolean",
+      "isReadOnly": false,
+      "isPersistent": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": false
+    }
+  ],
+  "methods": [],
+  "events": []
+}

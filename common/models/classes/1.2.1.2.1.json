@@ -1,0 +1,31 @@
+{
+  "description": "NcLevelSensor class descriptor",
+  "identity": [
+    1,
+    2,
+    1,
+    2,
+    1
+  ],
+  "name": "NcLevelSensor",
+  "fixedRole": null,
+  "properties": [
+    {
+      "description": "Level sensor reading in DB",
+      "id": {
+        "level": 5,
+        "index": 1
+      },
+      "name": "reading",
+      "typeName": "NcDB",
+      "isReadOnly": true,
+      "isPersistent": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": false
+    }
+  ],
+  "methods": [],
+  "events": []
+}

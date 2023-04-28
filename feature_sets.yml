@@ -1,3 +1,9 @@
 - id: common
   name: Common
   show_in_index: true
+- id: identification
+  name: Identification
+  show_in_index: true
+- id: monitoring
+  name: Monitoring
+  show_in_index: true

@@ -1,0 +1,30 @@
+{
+  "description": "NcReceiverMonitorProtected class descriptor",
+  "identity": [
+    1,
+    2,
+    3,
+    1
+  ],
+  "name": "NcReceiverMonitorProtected",
+  "fixedRole": null,
+  "properties": [
+    {
+      "description": "Indicates if signal protection is active",
+      "id": {
+        "level": 4,
+        "index": 1
+      },
+      "name": "signalProtectionStatus",
+      "typeName": "NcBoolean",
+      "isReadOnly": true,
+      "isPersistent": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": false
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,27 @@
+{
+    "description": "Payload status enum data type",
+    "name": "NcPayloadStatus",
+    "type": 3,
+    "items": [
+        {
+            "description": "This is the value when there's no connection.",
+            "name": "Undefined",
+            "value": 0
+        },
+        {
+            "description": "Payload is being received without errors and is the correct type",
+            "name": "PayloadOK",
+            "value": 1
+        },
+        {
+            "description": "Payload is being received but is of an unsupported type",
+            "name": "PayloadFormatUnsupported",
+            "value": 2
+        },
+        {
+            "description": "A payload error was encountered",
+            "name": "PayloadError",
+            "value": 3
+        }
+    ]
+}
