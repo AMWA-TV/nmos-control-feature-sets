@@ -3,9 +3,12 @@
 Includes models for control classes and datatypes used for identification.
 
 - [NMOS Control Feature Sets: Identification](#nmos-control-feature-sets-identification)
-  - [NcIdentBeacon](#ncidentbeacon)
+  - [Control classes](#control-classes)
+    - [NcIdentBeacon](#ncidentbeacon)
 
-## NcIdentBeacon
+## Control classes
+
+### NcIdentBeacon
 
 The identification beacon model may be used in different ways subject to implementation:
 

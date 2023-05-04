@@ -3,12 +3,16 @@
 Includes models for control classes and datatypes used for monitoring.
 
 - [NMOS Control Feature Sets: Monitoring](#nmos-control-feature-sets-monitoring)
-  - [NcConnectionStatus](#ncconnectionstatus)
-  - [NcPayloadStatus](#ncpayloadstatus)
-  - [NcReceiverMonitor](#ncreceivermonitor)
-  - [NcReceiverMonitorProtected](#ncreceivermonitorprotected)
+  - [Datatypes](#datatypes)
+    - [NcConnectionStatus](#ncconnectionstatus)
+    - [NcPayloadStatus](#ncpayloadstatus)
+  - [Control classes](#control-classes)
+    - [NcReceiverMonitor](#ncreceivermonitor)
+    - [NcReceiverMonitorProtected](#ncreceivermonitorprotected)
 
-## NcConnectionStatus
+## Datatypes
+
+### NcConnectionStatus
 
 ```typescript
 // Connection status enum data type
@@ -20,7 +24,7 @@ enum NcConnectionStatus {
 };
 ```
 
-## NcPayloadStatus
+### NcPayloadStatus
 
 ```typescript
 // Payload status enum data type
@@ -32,10 +36,14 @@ enum NcPayloadStatus {
 };
 ```
 
-## NcReceiverMonitor
+## Control classes
 
-Base receiver monitoring worker class.  
-It uses the Touchpoint mechanism inherited from NcObject in order to attach to the correct receiver identity.
+### NcReceiverMonitor
+
+Base receiver monitoring worker class required for expressing connection and payload statuses for an attached stream receiver.  
+It uses the Touchpoint mechanism inherited from NcObject to attach to the correct receiver identity.
+
+Receiver monitors MUST maintain a 1 to 1 relationship between their role and the touchpoint receiver entity they monitor as long as the receiver entity hasn't been disposed by the device.
 
 ```typescript
 // NcReceiverMonitor class descriptor
@@ -47,7 +55,7 @@ It uses the Touchpoint mechanism inherited from NcObject in order to attach to t
 };
 ```
 
-## NcReceiverMonitorProtected
+### NcReceiverMonitorProtected
 
 Derived receiver monitoring worker class for SMPTE ST 2022-7-type receivers.
 
