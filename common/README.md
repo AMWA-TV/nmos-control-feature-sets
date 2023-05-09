@@ -3,11 +3,15 @@
 Includes general-purpose models of control classes and datatypes.
 
 - [NMOS Control Feature Sets: Common](#nmos-control-feature-sets-common)
-  - [NcDB](#ncdb)
-  - [NcGain](#ncgain)
-  - [NcLevelSensor](#nclevelsensor)
+  - [Datatypes](#datatypes)
+    - [NcDB](#ncdb)
+  - [Control classes](#control-classes)
+    - [NcGain](#ncgain)
+    - [NcLevelSensor](#nclevelsensor)
 
-## NcDB
+## Datatypes
+
+### NcDB
 
 A ratio expressed in dB.
 
@@ -15,7 +19,9 @@ A ratio expressed in dB.
 typedef NcFloat32    NcDB; // A ratio expressed in dB.
 ```
 
-## NcGain
+## Control classes
+
+### NcGain
 
 The model for a simple gain control.
 
@@ -26,7 +32,7 @@ The model for a simple gain control.
 };
 ```
 
-## NcLevelSensor
+### NcLevelSensor
 
 The model for a simple level sensor that reads in dB
 
