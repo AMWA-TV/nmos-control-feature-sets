@@ -1,6 +1,3 @@
-- id: common
-  name: Common
-  show_in_index: true
 - id: identification
   name: Identification
   show_in_index: true
