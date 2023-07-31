@@ -17,11 +17,9 @@
       "name": "connectionStatus",
       "typeName": "NcConnectionStatus",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
-      "isDeprecated": false,
-      "isConstant": null
+      "isDeprecated": false
     },
     {
       "description": "Connection status message property",
@@ -32,11 +30,9 @@
       "name": "connectionStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
-      "isDeprecated": false,
-      "isConstant": null
+      "isDeprecated": false
     },
     {
       "description": "Payload status property",
@@ -47,11 +43,9 @@
       "name": "payloadStatus",
       "typeName": "NcPayloadStatus",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
-      "isDeprecated": false,
-      "isConstant": null
+      "isDeprecated": false
     },
     {
       "description": "Payload status message property",
@@ -62,11 +56,9 @@
       "name": "payloadStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
-      "isDeprecated": false,
-      "isConstant": null
+      "isDeprecated": false
     }
   ],
   "methods": [],

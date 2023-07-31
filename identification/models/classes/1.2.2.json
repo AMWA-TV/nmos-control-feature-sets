@@ -17,11 +17,9 @@
       "name": "active",
       "typeName": "NcBoolean",
       "isReadOnly": false,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
-      "isDeprecated": false,
-      "isConstant": null
+      "isDeprecated": false
     }
   ],
   "methods": [],
