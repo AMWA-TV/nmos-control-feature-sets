@@ -18,11 +18,10 @@
       "name": "signalProtectionStatus",
       "typeName": "NcBoolean",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     }
   ],
   "methods": [],
