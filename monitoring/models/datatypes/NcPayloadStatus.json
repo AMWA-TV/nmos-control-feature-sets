@@ -4,7 +4,7 @@
     "type": 3,
     "items": [
         {
-            "description": "This is the value when there's no connection",
+            "description": "This is the value when the receiver hasn't been instructed to connect to a stream",
             "name": "Undefined",
             "value": 0
         },

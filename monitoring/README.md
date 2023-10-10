@@ -29,7 +29,7 @@ enum NcConnectionStatus {
 ```typescript
 // Payload status enum data type
 enum NcPayloadStatus {
-    "Undefined",        // 0 This is the value when there's no connection
+    "Undefined",        // 0 This is the value when the receiver hasn't been instructed to connect to a stream
     "PayloadOK",        // 1 Payload is being received without errors and is the correct type
     "PayloadFormatUnsupported",        // 2 Payload is being received but is of an unsupported type
     "PayloadError"        // 3 A payload error was encountered
