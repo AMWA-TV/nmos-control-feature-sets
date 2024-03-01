@@ -1,0 +1,37 @@
+{
+    "description": "Property value holder descriptor",
+    "name": "NcPropertyValueHolder",
+    "type": 2,
+    "fields": [
+        {
+            "description": "Property id",
+            "name": "id",
+            "typeName": "NcPropertyId",
+            "isNullable": false,
+            "isSequence": false
+        },
+        {
+            "description": "Property name",
+            "name": "name",
+            "typeName": "NcString",
+            "isNullable": false,
+            "isSequence": false
+        },
+        {
+            "description": "Is the property ReadOnly?",
+            "name": "isReadOnly",
+            "typeName": "NcBoolean",
+            "isNullable": true,
+            "isSequence": false
+        },
+        {
+            "description": "Property value",
+            "name": "value",
+            "typeName": null,
+            "isNullable": true,
+            "isSequence": false
+        }
+    ],
+    "parentType": null,
+    "constraints": null
+}

@@ -1,0 +1,23 @@
+{
+    "description": "Object properties holder descriptor",
+    "name": "NcObjectPropertiesHolder",
+    "type": 2,
+    "fields": [
+        {
+            "description": "Object role path",
+            "name": "rolePath",
+            "typeName": "NcRolePath",
+            "isNullable": false,
+            "isSequence": false
+        },
+        {
+            "description": "Object properties values",
+            "name": "values",
+            "typeName": "NcPropertyValueHolder",
+            "isNullable": false,
+            "isSequence": true
+        }
+    ],
+    "parentType": null,
+    "constraints": null
+}

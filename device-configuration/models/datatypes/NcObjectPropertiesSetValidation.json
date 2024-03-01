@@ -1,0 +1,30 @@
+{
+    "description": "Object properties set validation descriptor",
+    "name": "NcObjectPropertiesSetValidation",
+    "type": 2,
+    "fields": [
+        {
+            "description": "Object role path",
+            "name": "rolePath",
+            "typeName": "NcRolePath",
+            "isNullable": false,
+            "isSequence": false
+        },
+        {
+            "description": "Validation status",
+            "name": "status",
+            "typeName": "NcMethodStatus",
+            "isNullable": false,
+            "isSequence": false
+        },
+        {
+            "description": "Validation status message",
+            "name": "statusMessage",
+            "typeName": "NcString",
+            "isNullable": true,
+            "isSequence": false
+        }
+    ],
+    "parentType": null,
+    "constraints": null
+}
