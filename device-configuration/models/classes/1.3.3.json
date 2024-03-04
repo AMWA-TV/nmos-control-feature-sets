@@ -60,7 +60,7 @@
         },
         {
           "description": "If true will validate properties on target paths and all their nested paths",
-          "name": "includeInherited",
+          "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,
           "isSequence": false
@@ -93,7 +93,7 @@
         },
         {
           "description": "If true will set properties on target paths and all their nested paths",
-          "name": "includeInherited",
+          "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,
           "isSequence": false
