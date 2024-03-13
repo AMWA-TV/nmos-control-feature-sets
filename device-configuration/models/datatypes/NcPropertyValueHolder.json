@@ -18,6 +18,13 @@
             "isSequence": false
         },
         {
+            "description": "Property type name. If null it means the type is any",
+            "name": "typeName",
+            "typeName": "NcName",
+            "isNullable": true,
+            "isSequence": false
+        },
+        {
             "description": "Is the property ReadOnly?",
             "name": "isReadOnly",
             "typeName": "NcBoolean",

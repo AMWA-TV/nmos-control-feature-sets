@@ -18,9 +18,11 @@ Includes models for control classes and datatypes used for device configuration 
 ### NcPropertyValueHolder
 
 ```typescript
+// Property value holder descriptor
 interface NcPropertyValueHolder {
     attribute NcPropertyId    id; // Property id
     attribute NcString    name; // Property name
+    attribute NcName?    typeName; // Property type name. If null it means the type is any
     attribute NcBoolean?    isReadOnly; // Is the property ReadOnly?
     attribute any?    value; // Property value
 };
