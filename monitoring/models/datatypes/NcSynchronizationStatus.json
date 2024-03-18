@@ -1,0 +1,38 @@
+{
+    "description": "Synchronization status enum data type",
+    "name": "NcSynchronizationStatus",
+    "type": 3,
+    "items": [
+        {
+            "description": "Feature not in use",
+            "name": "NotUsed",
+            "value": 0
+        },
+        {
+            "description": "Locked from baseband",
+            "name": "BasebandLocked",
+            "value": 1
+        },
+        {
+            "description": "Partially locked from baseband",
+            "name": "BasebandPartiallyLocked",
+            "value": 2
+        },
+        {
+            "description": "Partially locked from network",
+            "name": "NetworkLocked",
+            "value": 3
+        },
+        {
+            "description": "Partially locked from network",
+            "name": "NetworkPartiallyLocked",
+            "value": 3
+        },
+        {
+            "description": "Not locked",
+            "name": "NotLocked",
+            "value": 3
+        }
+    ],
+    "constraints": null
+}

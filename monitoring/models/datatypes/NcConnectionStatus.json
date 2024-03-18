@@ -4,23 +4,23 @@
     "type": 3,
     "items": [
         {
-            "description": "This is the value when the receiver hasn't been instructed to connect to a stream",
-            "name": "Undefined",
+            "description": "Inactive",
+            "name": "Inactive",
             "value": 0
         },
         {
-            "description": "Connected to a stream",
-            "name": "Connected",
+            "description": "Active and healthy",
+            "name": "Healthy",
             "value": 1
         },
         {
-            "description": "Not connected to a stream",
-            "name": "Disconnected",
+            "description": "Active and partially healthy",
+            "name": "PartiallyHealthy",
             "value": 2
         },
         {
-            "description": "A connection error was encountered",
-            "name": "ConnectionError",
+            "description": "Active and unhealthy",
+            "name": "Unhealthy",
             "value": 3
         }
     ],

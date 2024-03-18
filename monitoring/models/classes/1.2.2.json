@@ -1,0 +1,29 @@
+{
+  "description": "Baseline status monitoring class",
+  "classId": [
+    1,
+    2,
+    2
+  ],
+  "name": "NcStatusMonitor",
+  "fixedRole": null,
+  "properties": [
+    {
+      "description": "Overall status property",
+      "id": {
+        "level": 3,
+        "index": 1
+      },
+      "name": "overallStatus",
+      "typeName": "NcOverallStatus",
+      "isReadOnly": true,
+      "isPersistent": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "isConstant": null
+    }
+  ],
+  "methods": [],
+  "events": []
+}

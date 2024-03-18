@@ -1,0 +1,23 @@
+{
+    "description": "Stream status enum data type",
+    "name": "NcStreamStatus",
+    "type": 3,
+    "items": [
+        {
+            "description": "Inactive",
+            "name": "Inactive",
+            "value": 0
+        },
+        {
+            "description": "Stream is valid",
+            "name": "ValidStream",
+            "value": 1
+        },
+        {
+            "description": "Stream is invalid",
+            "name": "InvalidStream",
+            "value": 2
+        }
+    ],
+    "constraints": null
+}

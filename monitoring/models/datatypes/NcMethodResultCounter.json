@@ -1,0 +1,16 @@
+{
+  "description": "Counter method result",
+  "name": "NcMethodResultCounter",
+  "type": 2,
+  "fields": [
+    {
+      "description": "Counter value",
+      "name": "value",
+      "typeName": "NcUint64",
+      "isNullable": false,
+      "isSequence": false
+    }
+  ],
+  "parentType": "NcMethodResult",
+  "constraints": null
+}
