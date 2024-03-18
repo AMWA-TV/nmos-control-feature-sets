@@ -17,7 +17,7 @@ The identification beacon model may be used in different ways subject to impleme
 
 ```typescript
 // NcIdentBeacon class descriptor
-[control-class("1.2.2")] interface NcIdentBeacon: NcWorker {
+[control-class("1.2.1")] interface NcIdentBeacon: NcWorker {
     [element("3p1")]                attribute    NcBoolean    active;    // Indicator active state
 };
 ```
