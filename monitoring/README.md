@@ -70,8 +70,9 @@ enum NcSynchronizationStatus {
 // Stream status enum data type
 enum NcStreamStatus {
     "Inactive",        // 0 Inactive
-    "ValidStream",        // 1 Stream is valid
-    "InvalidStream"        // 2 Stream is invalid
+    "Healthy",        // 1 Active and healthy
+    "PartiallyHealthy",        // 2 Active and partially healthy
+    "Unhealthy"        // 3 Active and unhealthy
 };
 ```
 
@@ -96,6 +97,7 @@ The other goal is that it makes it easy to find all status monitors in a device 
 // Baseline status monitoring class
 [control-class("1.2.2")] interface NcStatusMonitor: NcWorker {
     [element("3p1")]    readonly    attribute    NcOverallStatus    overallStatus;    // Overall status property
+    [element("3p2")]    readonly    attribute    NcString?    overallStatusMessage;    // Overall status message property
 };
 ```
 

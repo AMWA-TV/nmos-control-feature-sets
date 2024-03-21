@@ -9,14 +9,19 @@
             "value": 0
         },
         {
-            "description": "Stream is valid",
-            "name": "ValidStream",
+            "description": "Active and healthy",
+            "name": "Healthy",
             "value": 1
         },
         {
-            "description": "Stream is invalid",
-            "name": "InvalidStream",
+            "description": "Active and partially healthy",
+            "name": "PartiallyHealthy",
             "value": 2
+        },
+        {
+            "description": "Active and unhealthy",
+            "name": "Unhealthy",
+            "value": 3
         }
     ],
     "constraints": null
