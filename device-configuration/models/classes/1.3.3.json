@@ -52,11 +52,11 @@
           "isSequence": false
         },
         {
-          "description": "The paths to be validated",
-          "name": "targetPaths",
+          "description": "The target role path",
+          "name": "rolePath",
           "typeName": "NcRolePath",
           "isNullable": false,
-          "isSequence": true
+          "isSequence": false
         },
         {
           "description": "If true will validate properties on target paths and all their nested paths",
@@ -85,11 +85,11 @@
           "isSequence": false
         },
         {
-          "description": "The paths to be validated",
-          "name": "targetPaths",
+          "description": "The target role path",
+          "name": "rolePath",
           "typeName": "NcRolePath",
           "isNullable": false,
-          "isSequence": true
+          "isSequence": false
         },
         {
           "description": "If true will set properties on target paths and all their nested paths",
