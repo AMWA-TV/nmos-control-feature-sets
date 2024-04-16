@@ -26,7 +26,7 @@
           "isSequence": false
         },
         {
-          "description": "If set will return properties on specified path and all the nested paths",
+          "description": "If true will return properties on specified path and all the nested paths",
           "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,
@@ -59,7 +59,7 @@
           "isSequence": false
         },
         {
-          "description": "If true will validate properties on target paths and all their nested paths",
+          "description": "If true will validate properties on target path and all the nested paths",
           "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,
@@ -92,7 +92,7 @@
           "isSequence": false
         },
         {
-          "description": "If true will set properties on target paths and all their nested paths",
+          "description": "If true will set properties on target path and all the nested paths",
           "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,

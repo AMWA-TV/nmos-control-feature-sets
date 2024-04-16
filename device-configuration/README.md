@@ -86,21 +86,21 @@ It also allows pre-validation of a data set before attempting to use in setting 
     // Get bulk object properties by given path
     [element("3m1")]    NcMethodResultBulkValuesHolder GetPropertiesByPath(
         NcRolePath rolePath,    // The target role path
-        NcBoolean recurse    // If set will return properties on specified path and all the nested paths
+        NcBoolean recurse    // If true will return properties on specified path and all the nested paths
     );
 
     // Validate bulk properties for setting by given paths
     [element("3m2")]    NcMethodResultObjectPropertiesSetValidation ValidateSetPropertiesByPath(
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath rolePath,    // The target role path
-        NcBoolean recurse    // If true will validate properties on target paths and all their nested paths
+        NcBoolean recurse    // If true will validate properties on target path and all the nested paths
     );
 
     // Set bulk properties by given paths
     [element("3m3")]    NcMethodResultObjectPropertiesSetValidation SetPropertiesByPath(
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath rolePath,    // The target role path
-        NcBoolean recurse    // If true will set properties on target paths and all their nested paths
+        NcBoolean recurse    // If true will set properties on target path and all the nested paths
     );
 };
 ```
