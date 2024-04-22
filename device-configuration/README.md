@@ -101,6 +101,7 @@ It also allows pre-validation of a data set before attempting to use in setting 
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath rolePath,    // The target role path
         NcBoolean recurse    // If true will set properties on target path and all the nested paths
+        NcBoolean allowPartial    // If true will allow the device to restore partially only the role paths which pass validation
     );
 };
 ```

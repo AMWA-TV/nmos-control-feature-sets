@@ -97,6 +97,13 @@
           "typeName": "NcBoolean",
           "isNullable": false,
           "isSequence": false
+        },
+        {
+          "description": "If true will allow the device to restore partially only the role paths which pass validation",
+          "name": "allowPartial",
+          "typeName": "NcBoolean",
+          "isNullable": false,
+          "isSequence": false
         }
       ],
       "isDeprecated": false
