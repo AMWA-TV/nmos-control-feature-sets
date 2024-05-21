@@ -8,14 +8,16 @@
             "name": "path",
             "typeName": "NcRolePath",
             "isNullable": false,
-            "isSequence": false
+            "isSequence": false,
+            "constraints": null
         },
         {
             "description": "Object properties values",
             "name": "values",
             "typeName": "NcPropertyValueHolder",
             "isNullable": false,
-            "isSequence": true
+            "isSequence": true,
+            "constraints": null
         }
     ],
     "parentType": null,

@@ -8,14 +8,16 @@
             "name": "validationFingerprint",
             "typeName": "NcString",
             "isNullable": true,
-            "isSequence": false
+            "isSequence": false,
+            "constraints": null
         },
         {
             "description": "Values by rolePath",
             "name": "values",
             "typeName": "NcObjectPropertiesHolder",
             "isNullable": false,
-            "isSequence": true
+            "isSequence": true,
+            "constraints": null
         }
     ],
     "parentType": null,
