@@ -32,7 +32,7 @@ interface NcPropertyValueHolder {
 
 ```typescript
 interface NcObjectPropertiesHolder {
-    attribute NcRolePath    rolePath; // Object role path
+    attribute NcRolePath    path; // Object role path
     attribute sequence<NcPropertyValueHolder>    values; // Object properties values
 };
 ```
@@ -50,7 +50,7 @@ interface NcBulkValuesHolder {
 
 ```typescript
 interface NcObjectPropertiesSetValidation {
-    attribute NcRolePath    rolePath; // Object role path
+    attribute NcRolePath    path; // Object role path
     attribute NcMethodStatus    status; // Validation status
     attribute NcString?    statusMessage; // Validation status message
 };
@@ -85,21 +85,21 @@ It also allows pre-validation of a data set before attempting to use in setting 
 
     // Get bulk object properties by given path
     [element("3m1")]    NcMethodResultBulkValuesHolder GetPropertiesByPath(
-        NcRolePath rolePath,    // The target role path
+        NcRolePath path,    // The target role path
         NcBoolean recurse    // If true will return properties on specified path and all the nested paths
     );
 
     // Validate bulk properties for setting by given paths
     [element("3m2")]    NcMethodResultObjectPropertiesSetValidation ValidateSetPropertiesByPath(
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
-        NcRolePath rolePath,    // The target role path
+        NcRolePath path,    // The target role path
         NcBoolean recurse    // If true will validate properties on target path and all the nested paths
     );
 
     // Set bulk properties by given paths
     [element("3m3")]    NcMethodResultObjectPropertiesSetValidation SetPropertiesByPath(
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
-        NcRolePath rolePath,    // The target role path
+        NcRolePath path,    // The target role path
         NcBoolean recurse    // If true will set properties on target path and all the nested paths
         NcBoolean allowPartial    // If true will allow the device to restore partially only the role paths which pass validation
     );
