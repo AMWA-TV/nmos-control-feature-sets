@@ -68,7 +68,7 @@ interface NcMethodResultBulkValuesHolder: NcMethodResult {
 
 ```typescript
 interface NcMethodResultObjectPropertiesSetValidation: NcMethodResult {
-    attribute sequence<NcObjectPropertiesSetValidation>    value; // Object properties set path validations
+    attribute sequence<NcObjectPropertiesSetValidation>    values; // Object properties set path validations
 };
 ```
 

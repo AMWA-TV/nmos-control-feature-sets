@@ -5,7 +5,7 @@
   "fields": [
     {
       "description": "Object properties set path validations",
-      "name": "value",
+      "name": "values",
       "typeName": "NcObjectPropertiesSetValidation",
       "isNullable": false,
       "isSequence": true,
