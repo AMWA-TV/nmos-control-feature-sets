@@ -8,21 +8,24 @@
             "name": "rolePath",
             "typeName": "NcRolePath",
             "isNullable": false,
-            "isSequence": false
+            "isSequence": false,
+            "constraints": null
         },
         {
             "description": "Validation status",
             "name": "status",
             "typeName": "NcMethodStatus",
             "isNullable": false,
-            "isSequence": false
+            "isSequence": false,
+            "constraints": null
         },
         {
             "description": "Validation status message",
             "name": "statusMessage",
             "typeName": "NcString",
             "isNullable": true,
-            "isSequence": false
+            "isSequence": false,
+            "constraints": null
         }
     ],
     "parentType": null,
