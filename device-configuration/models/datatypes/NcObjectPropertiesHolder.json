@@ -5,7 +5,7 @@
     "fields": [
         {
             "description": "Object role path",
-            "name": "rolePath",
+            "name": "path",
             "typeName": "NcRolePath",
             "isNullable": false,
             "isSequence": false
