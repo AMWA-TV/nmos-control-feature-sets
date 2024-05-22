@@ -19,7 +19,7 @@
             "value": 2
         },
         {
-            "description": "Partially locked from network",
+            "description": "Locked from network",
             "name": "NetworkLocked",
             "value": 3
         },
