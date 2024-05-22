@@ -26,12 +26,12 @@
         {
             "description": "Partially locked from network",
             "name": "NetworkPartiallyLocked",
-            "value": 3
+            "value": 4
         },
         {
             "description": "Not locked",
             "name": "NotLocked",
-            "value": 3
+            "value": 5
         }
     ],
     "constraints": null
