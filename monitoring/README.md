@@ -58,9 +58,9 @@ enum NcSynchronizationStatus {
     "NotUsed",        // 0 Feature not in use
     "BasebandLocked",        // 1 Locked from baseband
     "BasebandPartiallyLocked",        // 2 Partially locked from baseband
-    "NetworkLocked",        // 3 Partially locked from network
-    "NetworkPartiallyLocked",        // 3 Partially locked from network
-    "NotLocked"        // 3 Not locked
+    "NetworkLocked",        // 3 Locked from network
+    "NetworkPartiallyLocked",        // 4 Partially locked from network
+    "NotLocked"        // 5 Not locked
 };
 ```
 
