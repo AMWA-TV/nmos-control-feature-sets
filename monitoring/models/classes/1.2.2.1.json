@@ -18,11 +18,10 @@
       "name": "linkStatus",
       "typeName": "NcLinkStatus",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Link status message property",
@@ -33,11 +32,10 @@
       "name": "linkStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Connection status property",
@@ -48,11 +46,10 @@
       "name": "connectionStatus",
       "typeName": "NcConnectionStatus",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Connection status message property",
@@ -63,11 +60,10 @@
       "name": "connectionStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Synchronization status property",
@@ -78,11 +74,10 @@
       "name": "synchronizationStatus",
       "typeName": "NcSynchronizationStatus",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Synchronization status message property",
@@ -93,11 +88,10 @@
       "name": "synchronizationStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Grand master clock id property",
@@ -108,11 +102,10 @@
       "name": "grandMasterClockId",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Stream status property",
@@ -123,11 +116,10 @@
       "name": "streamStatus",
       "typeName": "NcStreamStatus",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Stream status message property",
@@ -138,11 +130,10 @@
       "name": "streamStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     }
   ],
   "methods": [
