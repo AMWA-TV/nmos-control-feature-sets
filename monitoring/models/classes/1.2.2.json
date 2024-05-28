@@ -17,11 +17,10 @@
       "name": "overallStatus",
       "typeName": "NcOverallStatus",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     },
     {
       "description": "Overall status message property",
@@ -32,11 +31,10 @@
       "name": "overallStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
-      "isPersistent": false,
       "isNullable": true,
       "isSequence": false,
       "isDeprecated": false,
-      "isConstant": null
+      "constraints": null
     }
   ],
   "methods": [],
