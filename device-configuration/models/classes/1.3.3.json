@@ -23,14 +23,16 @@
           "name": "path",
           "typeName": "NcRolePath",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         },
         {
           "description": "If true will return properties on specified path and all the nested paths",
           "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         }
       ],
       "isDeprecated": false
@@ -49,21 +51,24 @@
           "name": "dataSet",
           "typeName": "NcBulkValuesHolder",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         },
         {
           "description": "The target role path",
           "name": "path",
           "typeName": "NcRolePath",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         },
         {
           "description": "If true will validate properties on target path and all the nested paths",
           "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         }
       ],
       "isDeprecated": false
@@ -82,28 +87,32 @@
           "name": "dataSet",
           "typeName": "NcBulkValuesHolder",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         },
         {
           "description": "The target role path",
           "name": "path",
           "typeName": "NcRolePath",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         },
         {
           "description": "If true will set properties on target path and all the nested paths",
           "name": "recurse",
           "typeName": "NcBoolean",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         },
         {
           "description": "If true will allow the device to restore partially only the role paths which pass validation",
           "name": "allowPartial",
           "typeName": "NcBoolean",
           "isNullable": false,
-          "isSequence": false
+          "isSequence": false,
+          "constraints": null
         }
       ],
       "isDeprecated": false
