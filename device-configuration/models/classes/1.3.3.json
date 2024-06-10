@@ -107,8 +107,8 @@
           "constraints": null
         },
         {
-          "description": "If true will allow the device to restore partially only the role paths which pass validation",
-          "name": "allowPartial",
+          "description": "If true will allow the device to restore only the role paths which pass validation (perform an incomplete restore)",
+          "name": "allowIncomplete",
           "typeName": "NcBoolean",
           "isNullable": false,
           "isSequence": false,
