@@ -1,0 +1,18 @@
+{
+  "description": "Property trait enumeration",
+  "name": "NcPropertyTrait",
+  "type": 3,
+  "items": [
+    {
+      "description": "Property is instance specific",
+      "name": "InstanceSpecific",
+      "value": 1
+    },
+    {
+      "description": "Property is ephemeral",
+      "name": "Ephemeral",
+      "value": 2
+    }
+  ],
+  "constraints": null
+}

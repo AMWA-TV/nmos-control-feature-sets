@@ -69,6 +69,14 @@
           "isNullable": false,
           "isSequence": false,
           "constraints": null
+        },
+        {
+          "description": "If populated (not an empty collection) will exclude the properties matching any of the specified traits for validation",
+          "name": "excludedPropertyTraits",
+          "typeName": "NcPropertyTrait",
+          "isNullable": false,
+          "isSequence": true,
+          "constraints": null
         }
       ],
       "isDeprecated": false
@@ -106,6 +114,14 @@
           "isSequence": false,
           "constraints": null
         },
+        {
+          "description": "If populated (not an empty collection) will exclude the properties matching any of the specified traits from being restored. These properties might receive values from the device instead. When populating this argument, allowIncomplete MUST be set to true",
+          "name": "excludedPropertyTraits",
+          "typeName": "NcPropertyTrait",
+          "isNullable": false,
+          "isSequence": true,
+          "constraints": null
+        }
         {
           "description": "If true will allow the device to restore only the role paths which pass validation (perform an incomplete restore)",
           "name": "allowIncomplete",

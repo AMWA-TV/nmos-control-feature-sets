@@ -4,6 +4,7 @@ Includes models for control classes and datatypes used for device configuration 
 
 - [NMOS Control Feature Sets: Device configuration](#nmos-control-feature-sets-device-configuration)
   - [Datatypes](#datatypes)
+    - [NcPropertyTrait](#ncpropertytrait)
     - [NcPropertyValueHolder](#ncpropertyvalueholder)
     - [NcObjectPropertiesHolder](#ncobjectpropertiesholder)
     - [NcBulkValuesHolder](#ncbulkvaluesholder)
@@ -15,6 +16,16 @@ Includes models for control classes and datatypes used for device configuration 
 
 ## Datatypes
 
+### NcPropertyTrait
+
+```typescript
+// Property trait enumeration
+enum NcPropertyTrait {
+    "InstanceSpecific",        // 1 Property is instance specific
+    "Ephemeral",        // 2 Property is ephemeral
+};
+```
+
 ### NcPropertyValueHolder
 
 ```typescript
@@ -24,6 +35,7 @@ interface NcPropertyValueHolder {
     attribute NcString    name; // Property name
     attribute NcName?    typeName; // Property type name. If null it means the type is any
     attribute NcBoolean?    isReadOnly; // Is the property ReadOnly?
+    attribute sequence<NcPropertyTrait> traits; // Describes the property traits as a collection of unique items.
     attribute any?    value; // Property value
 };
 ```
@@ -94,6 +106,8 @@ It also allows pre-validation of a data set before attempting to use in setting 
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath path,    // The target role path
         NcBoolean recurse    // If true will validate properties on target path and all the nested paths
+        sequence<NcPropertyTrait> excludedPropertyTraits // If populated (not an empty collection) will exclude the properties matching any of the specified traits for validation
+
     );
 
     // Set bulk properties by given paths
@@ -101,6 +115,7 @@ It also allows pre-validation of a data set before attempting to use in setting 
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath path,    // The target role path
         NcBoolean recurse    // If true will set properties on target path and all the nested paths
+        sequence<NcPropertyTrait> excludedPropertyTraits // If populated (not an empty collection) will exclude the properties matching any of the specified traits from being restored. These properties might receive values from the device instead. When populating this argument, allowIncomplete MUST be set to true
         NcBoolean allowIncomplete    // If true will allow the device to restore only the role paths which pass validation (perform an incomplete restore)
     );
 };
