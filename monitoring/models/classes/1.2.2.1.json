@@ -94,12 +94,12 @@
       "constraints": null
     },
     {
-      "description": "Grand master clock id property",
+      "description": "Synchronization source id property",
       "id": {
         "level": 4,
         "index": 7
       },
-      "name": "grandMasterClockId",
+      "name": "synchronizationSourceId",
       "typeName": "NcString",
       "isReadOnly": true,
       "isNullable": true,
@@ -144,7 +144,7 @@
         "index": 1
       },
       "name": "GetLostPackets",
-      "resultDatatype": "NcMethodResultCounter",
+      "resultDatatype": "NcMethodResultCounters",
       "parameters": [],
       "isDeprecated": false
     },
@@ -155,7 +155,7 @@
         "index": 2
       },
       "name": "GetLatePackets",
-      "resultDatatype": "NcMethodResultCounter",
+      "resultDatatype": "NcMethodResultCounters",
       "parameters": [],
       "isDeprecated": false
     },

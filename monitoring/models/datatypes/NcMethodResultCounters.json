@@ -1,14 +1,14 @@
 {
-  "description": "Counter method result",
-  "name": "NcMethodResultCounter",
+  "description": "Counters method result",
+  "name": "NcMethodResultCounters",
   "type": 2,
   "fields": [
     {
-      "description": "Counter value",
+      "description": "Counters",
       "name": "value",
-      "typeName": "NcUint64",
+      "typeName": "NcPacketCounter",
       "isNullable": false,
-      "isSequence": false,
+      "isSequence": true,
       "constraints": null
     }
   ],

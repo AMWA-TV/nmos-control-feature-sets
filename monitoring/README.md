@@ -9,7 +9,8 @@ Includes models for control classes and datatypes used for monitoring.
     - [NcConnectionStatus](#ncconnectionstatus)
     - [NcSynchronizationStatus](#ncsynchronizationstatus)
     - [NcStreamStatus](#ncstreamstatus)
-    - [NcMethodResultCounter](#ncmethodresultcounter)
+    - [NcPacketCounter](#ncpacketcounter)
+    - [NcMethodResultCounters](#ncmethodresultcounters)
   - [Control classes](#control-classes)
     - [NcStatusMonitor](#ncstatusmonitor)
     - [NcReceiverMonitor](#ncreceivermonitor)
@@ -76,12 +77,22 @@ enum NcStreamStatus {
 };
 ```
 
-### NcMethodResultCounter
+### NcPacketCounter
 
 ```typescript
-// Counter method result
-interface NcMethodResultCounter: NcMethodResult {
+// Packet counter data type
+interface NcPacketCounter {
+    attribute NcString    name; // Counter name
     attribute NcUint64    value; // Counter value
+};
+```
+
+### NcMethodResultCounters
+
+```typescript
+// Counters method result
+interface NcMethodResultCounters: NcMethodResult {
+    attribute sequence<NcPacketCounter>    value; // Counters
 };
 ```
 
@@ -120,15 +131,15 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     [element("4p4")]    readonly    attribute    NcString?    connectionStatusMessage;    // Connection status message property
     [element("4p5")]    readonly    attribute    NcSynchronizationStatus    synchronizationStatus;    // Synchronization status property
     [element("4p6")]    readonly    attribute    NcString?    synchronizationStatusMessage;    // Synchronization status message property
-    [element("4p7")]    readonly    attribute    NcString?    grandMasterClockId;    // Grand master clock id property
+    [element("4p7")]    readonly    attribute    NcString?    synchronizationSourceId;    // Synchronization source id property
     [element("4p8")]    readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
     [element("4p9")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
 
     // Gets the lost packets
-    [element("4m1")]    NcMethodResultCounter GetLostPackets();
+    [element("4m1")]    NcMethodResultCounters GetLostPackets();
 
     // Gets the late packets
-    [element("4m2")]    NcMethodResultCounter GetLatePackets();
+    [element("4m2")]    NcMethodResultCounters GetLatePackets();
 
     // Resets the packet counters
     [element("4m3")]    NcMethodResult ResetPacketCounters();

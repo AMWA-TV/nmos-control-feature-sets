@@ -1,0 +1,24 @@
+{
+    "description": "Packet counter data type",
+    "name": "NcPacketCounter",
+    "type": 2,
+    "items": [
+        {
+            "description": "Counter name",
+            "name": "name",
+            "typeName": "NcString",
+            "isNullable": false,
+            "isSequence": false,
+            "constraints": null
+        },
+        {
+            "description": "Counter value",
+            "name": "value",
+            "typeName": "NcUint64",
+            "isNullable": false,
+            "isSequence": false,
+            "constraints": null
+        }
+    ],
+    "constraints": null
+}
