@@ -1,0 +1,33 @@
+{
+  "description": "Restore validation status enumeration",
+  "name": "NcRestoreValidationStatus",
+  "type": 3,
+  "items": [
+    {
+      "description": "Restore was successful",
+      "name": "Ok",
+      "value": 200
+    },
+    {
+      "description": "Excluded from restore due to data provided in the request",
+      "name": "Excluded",
+      "value": 204
+    },
+    {
+      "description": "Restore failed because data provided is invalid",
+      "name": "BadData",
+      "value": 400
+    },
+    {
+      "description": "Restore failed because of missing dependency data",
+      "name": "MissingDependency",
+      "value": 424
+    },
+    {
+      "description": "Restore failed due to an internal error",
+      "name": "InternalError",
+      "value": 500
+    }
+  ],
+  "constraints": null
+}

@@ -14,7 +14,7 @@
         {
             "description": "Validation status",
             "name": "status",
-            "typeName": "NcMethodStatus",
+            "typeName": "NcRestoreValidationStatus",
             "isNullable": false,
             "isSequence": false,
             "constraints": null
