@@ -14,18 +14,23 @@
       "value": 204
     },
     {
-      "description": "Restore failed because data provided is invalid",
-      "name": "BadData",
+      "description": "Restore failed because relevant backup data set provided is invalid",
+      "name": "InvalidData",
       "value": 400
     },
     {
-      "description": "Restore failed because of missing dependency data",
+      "description": "Restore failed because the role path is not found in the device model or the device cannot create the role path from the data set",
+      "name": "NotFound",
+      "value": 404
+    },
+    {
+      "description": "Restore failed because of missing dependency information in the relevant backup data set",
       "name": "MissingDependency",
       "value": 424
     },
     {
-      "description": "Restore failed due to an internal error",
-      "name": "InternalError",
+      "description": "Restore failed due to an internal device error preventing the restore from happening",
+      "name": "DeviceError",
       "value": 500
     }
   ],

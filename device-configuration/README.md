@@ -68,9 +68,10 @@ interface NcBulkValuesHolder {
 enum NcRestoreValidationStatus {
     "Ok",                   // 200 Restore was successful
     "Excluded",             // 204 Excluded from restore due to data provided in the request
-    "BadData",              // 400 Restore failed because data provided is invalid
-    "MissingDependency",    // 424 Restore failed because of missing dependency data
-    "InternalError",        // 500 Restore failed due to an internal error
+    "InvalidData",          // 400 Restore failed because relevant backup data set provided is invalid
+    "NotFound",             // 404 Restore failed because the role path is not found in the device model or the device cannot create the role path from the data set
+    "MissingDependency",    // 424 Restore failed because of missing dependency information in the relevant backup data set
+    "DeviceError",          // 500 Restore failed due to an internal device error preventing the restore from happening
 };
 ```
 
