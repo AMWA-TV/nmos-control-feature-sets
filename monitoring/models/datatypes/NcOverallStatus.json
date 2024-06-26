@@ -4,6 +4,11 @@
     "type": 3,
     "items": [
         {
+            "description": "Inactive",
+            "name": "Inactive",
+            "value": 0
+        },
+        {
             "description": "The overall status is healthy",
             "name": "Healthy",
             "value": 1

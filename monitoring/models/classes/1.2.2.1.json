@@ -138,23 +138,23 @@
   ],
   "methods": [
     {
-      "description": "Gets the lost packets",
+      "description": "Gets the lost packet counters",
       "id": {
         "level": 4,
         "index": 1
       },
-      "name": "GetLostPackets",
+      "name": "GetLostPacketCounters",
       "resultDatatype": "NcMethodResultCounters",
       "parameters": [],
       "isDeprecated": false
     },
     {
-      "description": "Gets the late packets",
+      "description": "Gets the late packet counters",
       "id": {
         "level": 4,
         "index": 2
       },
-      "name": "GetLatePackets",
+      "name": "GetLatePacketCounters",
       "resultDatatype": "NcMethodResultCounters",
       "parameters": [],
       "isDeprecated": false

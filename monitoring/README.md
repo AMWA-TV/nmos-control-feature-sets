@@ -22,9 +22,10 @@ Includes models for control classes and datatypes used for monitoring.
 ```typescript
 // Overall status enum data type
 enum NcOverallStatus {
-    "Healthy",        // 1 The overall status is healthy
-    "PartiallyHealthy",        // 2 The overall status is partially healthy
-    "Unhealthy"        // 3 The overall status is unhealthy
+    "Inactive",          // 0 Inactive
+    "Healthy",           // 1 The overall status is healthy
+    "PartiallyHealthy",  // 2 The overall status is partially healthy
+    "Unhealthy"          // 3 The overall status is unhealthy
 };
 ```
 
@@ -33,9 +34,9 @@ enum NcOverallStatus {
 ```typescript
 // Link status enum data type
 enum NcLinkStatus {
-    "AllDown",        // 1 All the associated network interfaces are down
-    "SomeDown",        // 2 Some of the associated network interfaces are down
-    "AllUp"        // 3 All the associated network interfaces are up
+    "AllDown",   // 1 All the associated network interfaces are down
+    "SomeDown",  // 2 Some of the associated network interfaces are down
+    "AllUp"      // 3 All the associated network interfaces are up
 };
 ```
 
@@ -44,10 +45,10 @@ enum NcLinkStatus {
 ```typescript
 // Connection status enum data type
 enum NcConnectionStatus {
-    "Inactive",        // 0 Inactive
-    "Healthy",        // 1 Active and healthy
-    "PartiallyHealthy",        // 2 Active and partially healthy
-    "Unhealthy"        // 3 Active and unhealthy
+    "Inactive",          // 0 Inactive
+    "Healthy",           // 1 Active and healthy
+    "PartiallyHealthy",  // 2 Active and partially healthy
+    "Unhealthy"          // 3 Active and unhealthy
 };
 ```
 
@@ -56,12 +57,12 @@ enum NcConnectionStatus {
 ```typescript
 // Synchronization status enum data type
 enum NcSynchronizationStatus {
-    "NotUsed",        // 0 Feature not in use
-    "BasebandLocked",        // 1 Locked from baseband
-    "BasebandPartiallyLocked",        // 2 Partially locked from baseband
-    "NetworkLocked",        // 3 Locked from network
-    "NetworkPartiallyLocked",        // 4 Partially locked from network
-    "NotLocked"        // 5 Not locked
+    "NotUsed",                  // 0 Feature not in use
+    "BasebandLocked",           // 1 Locked from baseband
+    "BasebandPartiallyLocked",  // 2 Partially locked from baseband
+    "NetworkLocked",            // 3 Locked from network
+    "NetworkPartiallyLocked",   // 4 Partially locked from network
+    "NotLocked"                 // 5 Not locked
 };
 ```
 
@@ -70,10 +71,10 @@ enum NcSynchronizationStatus {
 ```typescript
 // Stream status enum data type
 enum NcStreamStatus {
-    "Inactive",        // 0 Inactive
-    "Healthy",        // 1 Active and healthy
-    "PartiallyHealthy",        // 2 Active and partially healthy
-    "Unhealthy"        // 3 Active and unhealthy
+    "Inactive",          // 0 Inactive
+    "Healthy",           // 1 Active and healthy
+    "PartiallyHealthy",  // 2 Active and partially healthy
+    "Unhealthy"          // 3 Active and unhealthy
 };
 ```
 
@@ -135,11 +136,11 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     [element("4p8")]    readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
     [element("4p9")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
 
-    // Gets the lost packets
-    [element("4m1")]    NcMethodResultCounters GetLostPackets();
+    // Gets the lost packet counters
+    [element("4m1")]    NcMethodResultCounters GetLostPacketCounters();
 
-    // Gets the late packets
-    [element("4m2")]    NcMethodResultCounters GetLatePackets();
+    // Gets the late packet counters
+    [element("4m2")]    NcMethodResultCounters GetLatePacketCounters();
 
     // Resets the packet counters
     [element("4m3")]    NcMethodResult ResetPacketCounters();
