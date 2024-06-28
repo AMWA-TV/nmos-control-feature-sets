@@ -69,6 +69,14 @@
           "isNullable": false,
           "isSequence": false,
           "constraints": null
+        },
+        {
+          "description": "If populated (not an empty collection) will include the properties matching any of the specified traits in the restore validation. When not populated only properties without traits are validated for restore",
+          "name": "includedPropertyTraits",
+          "typeName": "NcPropertyTrait",
+          "isNullable": false,
+          "isSequence": true,
+          "constraints": null
         }
       ],
       "isDeprecated": false
@@ -107,11 +115,11 @@
           "constraints": null
         },
         {
-          "description": "If true will allow the device to restore only the role paths which pass validation (perform an incomplete restore)",
-          "name": "allowIncomplete",
-          "typeName": "NcBoolean",
+          "description": "If populated (not an empty collection) will include the properties matching any of the specified traits in the restore. When not populated only properties without traits are restored",
+          "name": "includedPropertyTraits",
+          "typeName": "NcPropertyTrait",
           "isNullable": false,
-          "isSequence": false,
+          "isSequence": true,
           "constraints": null
         }
       ],
