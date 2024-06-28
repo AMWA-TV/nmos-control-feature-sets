@@ -39,7 +39,7 @@
             "description": "Describes the property traits as a collection of unique items.",
             "name": "traits",
             "typeName": "NcPropertyTrait",
-            "isNullable": true,
+            "isNullable": false,
             "isSequence": true,
             "constraints": null
         },
