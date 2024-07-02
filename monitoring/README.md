@@ -58,11 +58,9 @@ enum NcConnectionStatus {
 // Synchronization status enum data type
 enum NcSynchronizationStatus {
     "NotUsed",                  // 0 Feature not in use
-    "BasebandLocked",           // 1 Locked from baseband
-    "BasebandPartiallyLocked",  // 2 Partially locked from baseband
-    "NetworkLocked",            // 3 Locked from network
-    "NetworkPartiallyLocked",   // 4 Partially locked from network
-    "NotLocked"                 // 5 Not locked
+    "Healthy",                  // 1 Locked to a synchronization source
+    "PartiallyHealthy",         // 2 Partially locked to a synchronization source
+    "Unhealthy"                 // 3 Not locked to a synchronization source
 };
 ```
 
@@ -108,8 +106,9 @@ The other goal is that it makes it easy to find all status monitors in a device 
 ```typescript
 // Baseline status monitoring class
 [control-class("1.2.2")] interface NcStatusMonitor: NcWorker {
-    [element("3p1")]    readonly    attribute    NcOverallStatus    overallStatus;    // Overall status property
-    [element("3p2")]    readonly    attribute    NcString?    overallStatusMessage;    // Overall status message property
+    [element("3p1")]    readonly    attribute    NcOverallStatus    overallStatus;          // Overall status property
+    [element("3p2")]    readonly    attribute    NcString?    overallStatusMessage;         // Overall status message property
+    [element("3p3")]                attribute    NcUint32    overallStatusReportingDelay;   // Overall status reporting delay property (in seconds, default is 5s and 0 means no delay)
 };
 ```
 

@@ -9,29 +9,19 @@
             "value": 0
         },
         {
-            "description": "Locked from baseband",
-            "name": "BasebandLocked",
+            "description": "Locked to a synchronization source",
+            "name": "Healthy",
             "value": 1
         },
         {
-            "description": "Partially locked from baseband",
-            "name": "BasebandPartiallyLocked",
+            "description": "Partially locked to a synchronization source",
+            "name": "PartiallyHealthy",
             "value": 2
         },
         {
-            "description": "Locked from network",
-            "name": "NetworkLocked",
+            "description": "Not locked to a synchronization source",
+            "name": "Unhealthy",
             "value": 3
-        },
-        {
-            "description": "Partially locked from network",
-            "name": "NetworkPartiallyLocked",
-            "value": 4
-        },
-        {
-            "description": "Not locked",
-            "name": "NotLocked",
-            "value": 5
         }
     ],
     "constraints": null

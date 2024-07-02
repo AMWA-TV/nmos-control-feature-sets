@@ -35,6 +35,20 @@
       "isSequence": false,
       "isDeprecated": false,
       "constraints": null
+    },
+    {
+      "description": "Overall status reporting delay property (in seconds, default is 5s and 0 means no delay)",
+      "id": {
+        "level": 3,
+        "index": 3
+      },
+      "name": "overallStatusReportingDelay",
+      "typeName": "NcUint32",
+      "isReadOnly": false,
+      "isNullable": true,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
     }
   ],
   "methods": [],
