@@ -45,7 +45,7 @@
       "name": "overallStatusReportingDelay",
       "typeName": "NcUint32",
       "isReadOnly": false,
-      "isNullable": true,
+      "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
       "constraints": null
