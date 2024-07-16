@@ -134,6 +134,20 @@
       "isSequence": false,
       "isDeprecated": false,
       "constraints": null
+    },
+    {
+      "description": "Automatic reset packet counters property (default: true)",
+      "id": {
+        "level": 4,
+        "index": 10
+      },
+      "name": "autoResetPacketCounters",
+      "typeName": "NcBoolean",
+      "isReadOnly": true,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
     }
   ],
   "methods": [
@@ -166,6 +180,17 @@
         "index": 3
       },
       "name": "ResetPacketCounters",
+      "resultDatatype": "NcMethodResult",
+      "parameters": [],
+      "isDeprecated": false
+    },
+    {
+      "description": "Approves the current synchronization source",
+      "id": {
+        "level": 4,
+        "index": 4
+      },
+      "name": "ApproveCurrentSynchronizationSource",
       "resultDatatype": "NcMethodResult",
       "parameters": [],
       "isDeprecated": false

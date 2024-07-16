@@ -106,9 +106,9 @@ The other goal is that it makes it easy to find all status monitors in a device 
 ```typescript
 // Baseline status monitoring class
 [control-class("1.2.2")] interface NcStatusMonitor: NcWorker {
-    [element("3p1")]    readonly    attribute    NcOverallStatus    overallStatus;          // Overall status property
-    [element("3p2")]    readonly    attribute    NcString?    overallStatusMessage;         // Overall status message property
-    [element("3p3")]                attribute    NcUint32    overallStatusReportingDelay;   // Overall status reporting delay property (in seconds, default is 5s and 0 means no delay)
+    [element("3p1")]    readonly    attribute    NcOverallStatus    overallStatus;      // Overall status property
+    [element("3p2")]    readonly    attribute    NcString?    overallStatusMessage;     // Overall status message property
+    [element("3p3")]                attribute    NcUint32    statusReportingDelay;      // Status reporting delay property (in seconds, default is 3s and 0 means no delay)
 };
 ```
 
@@ -125,15 +125,16 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
 ```typescript
 // Receiver monitor class descriptor
 [control-class("1.2.2.1")] interface NcReceiverMonitor: NcStatusMonitor {
-    [element("4p1")]    readonly    attribute    NcLinkStatus    linkStatus;    // Link status property
-    [element("4p2")]    readonly    attribute    NcString?    linkStatusMessage;    // Link status message property
-    [element("4p3")]    readonly    attribute    NcConnectionStatus    connectionStatus;    // Connection status property
-    [element("4p4")]    readonly    attribute    NcString?    connectionStatusMessage;    // Connection status message property
-    [element("4p5")]    readonly    attribute    NcSynchronizationStatus    synchronizationStatus;    // Synchronization status property
-    [element("4p6")]    readonly    attribute    NcString?    synchronizationStatusMessage;    // Synchronization status message property
-    [element("4p7")]    readonly    attribute    NcString?    synchronizationSourceId;    // Synchronization source id property
-    [element("4p8")]    readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
-    [element("4p9")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
+    [element("4p1")]     readonly    attribute    NcLinkStatus    linkStatus;    // Link status property
+    [element("4p2")]     readonly    attribute    NcString?    linkStatusMessage;    // Link status message property
+    [element("4p3")]     readonly    attribute    NcConnectionStatus    connectionStatus;    // Connection status property
+    [element("4p4")]     readonly    attribute    NcString?    connectionStatusMessage;    // Connection status message property
+    [element("4p5")]     readonly    attribute    NcSynchronizationStatus    synchronizationStatus;    // Synchronization status property
+    [element("4p6")]     readonly    attribute    NcString?    synchronizationStatusMessage;    // Synchronization status message property
+    [element("4p7")]     readonly    attribute    NcString?    synchronizationSourceId;    // Synchronization source id property
+    [element("4p8")]     readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
+    [element("4p9")]     readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
+    [element("4p10")]                attribute    NcBoolean    autoResetPacketCounters;    // Automatic reset packet counters property (default: true)
 
     // Gets the lost packet counters
     [element("4m1")]    NcMethodResultCounters GetLostPacketCounters();
@@ -143,5 +144,8 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
 
     // Resets the packet counters
     [element("4m3")]    NcMethodResult ResetPacketCounters();
+
+    // Approves the current synchronization source
+    [element("4m4")]    NcMethodResult ApproveCurrentSynchronizationSource();
 };
 ```
