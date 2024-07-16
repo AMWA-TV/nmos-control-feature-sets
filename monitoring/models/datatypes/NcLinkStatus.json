@@ -4,8 +4,8 @@
     "type": 3,
     "items": [
         {
-            "description": "All the associated network interfaces are down",
-            "name": "AllDown",
+            "description": "All the associated network interfaces are up",
+            "name": "AllUp",
             "value": 1
         },
         {
@@ -14,8 +14,8 @@
             "value": 2
         },
         {
-            "description": "All the associated network interfaces are up",
-            "name": "AllUp",
+            "description": "All the associated network interfaces are down",
+            "name": "AllDown",
             "value": 3
         }
     ],

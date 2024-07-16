@@ -34,9 +34,9 @@ enum NcOverallStatus {
 ```typescript
 // Link status enum data type
 enum NcLinkStatus {
-    "AllDown",   // 1 All the associated network interfaces are down
-    "SomeDown",  // 2 Some of the associated network interfaces are down
-    "AllUp"      // 3 All the associated network interfaces are up
+    "AllUp",        // 1 All the associated network interfaces are up
+    "SomeDown",     // 2 Some of the associated network interfaces are down
+    "AllDown"       // 3 All the associated network interfaces are down
 };
 ```
 
