@@ -80,12 +80,12 @@
       "constraints": null
     },
     {
-      "description": "Synchronization status message property",
+      "description": "External synchronization status message property",
       "id": {
         "level": 4,
         "index": 6
       },
-      "name": "synchronizationStatusMessage",
+      "name": "externalSynchronizationStatusMessage",
       "typeName": "NcString",
       "isReadOnly": true,
       "isNullable": true,
