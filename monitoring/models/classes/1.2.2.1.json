@@ -66,12 +66,12 @@
       "constraints": null
     },
     {
-      "description": "Synchronization status property",
+      "description": "External synchronization status property",
       "id": {
         "level": 4,
         "index": 5
       },
-      "name": "synchronizationStatus",
+      "name": "externalSynchronizationStatus",
       "typeName": "NcSynchronizationStatus",
       "isReadOnly": true,
       "isNullable": false,
