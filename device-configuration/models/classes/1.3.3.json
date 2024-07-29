@@ -71,10 +71,10 @@
           "constraints": null
         },
         {
-          "description": "If populated (not an empty collection) will include the properties matching any of the specified traits in the restore validation. When not populated only properties without traits are validated for restore",
-          "name": "includedPropertyTraits",
+          "description": "If left null then all properties regardless of their traits will be validated for restore. When populated (not null) only properties with these specific traits are validated for restore",
+          "name": "propertyTraits",
           "typeName": "NcPropertyTrait",
-          "isNullable": false,
+          "isNullable": true,
           "isSequence": true,
           "constraints": null
         }
@@ -115,10 +115,10 @@
           "constraints": null
         },
         {
-          "description": "If populated (not an empty collection) will include the properties matching any of the specified traits in the restore. When not populated only properties without traits are restored",
-          "name": "includedPropertyTraits",
+          "description": "If left null then all properties regardless of their traits will be included in the restore. When populated (not null) only properties with these specific traits are included in the restore",
+          "name": "propertyTraits",
           "typeName": "NcPropertyTrait",
-          "isNullable": false,
+          "isNullable": true,
           "isSequence": true,
           "constraints": null
         }

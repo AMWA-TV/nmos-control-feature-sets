@@ -20,6 +20,14 @@
             "constraints": null
         },
         {
+            "description": "Validation property exceptions",
+            "name": "exceptions",
+            "typeName": "NcPropertyRestoreException",
+            "isNullable": false,
+            "isSequence": true,
+            "constraints": null
+        },
+        {
             "description": "Validation status message",
             "name": "statusMessage",
             "typeName": "NcString",

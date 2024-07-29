@@ -9,6 +9,11 @@
       "value": 200
     },
     {
+      "description": "Restore was partially successful",
+      "name": "PartiallyOk",
+      "value": 206
+    },
+    {
       "description": "Excluded from restore due to data provided in the request",
       "name": "Excluded",
       "value": 204
