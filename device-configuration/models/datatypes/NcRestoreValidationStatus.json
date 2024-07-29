@@ -16,7 +16,7 @@
     {
       "description": "Excluded from restore due to data provided in the request",
       "name": "Excluded",
-      "value": 204
+      "value": 210
     },
     {
       "description": "Restore failed because relevant backup data set provided is invalid",
