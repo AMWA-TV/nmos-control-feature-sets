@@ -40,7 +40,7 @@ interface NcPropertyValueHolder {
     attribute NcPropertyId    id; // Property id
     attribute NcString    name; // Property name
     attribute NcName?    typeName; // Property type name. If null it means the type is any
-    attribute NcBoolean?    isReadOnly; // Is the property ReadOnly?
+    attribute NcBoolean    isReadOnly; // Is the property ReadOnly?
     attribute sequence<NcPropertyTrait> traits; // Describes the property traits as a collection of unique items.
     attribute any?    value; // Property value
 };

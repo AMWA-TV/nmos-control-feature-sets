@@ -31,7 +31,7 @@
             "description": "Is the property ReadOnly?",
             "name": "isReadOnly",
             "typeName": "NcBoolean",
-            "isNullable": true,
+            "isNullable": false,
             "isSequence": false,
             "constraints": null
         },
