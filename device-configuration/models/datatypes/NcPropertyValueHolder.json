@@ -36,7 +36,7 @@
             "constraints": null
         },
         {
-            "description": "Describes the property traits as a collection of unique items.",
+            "description": "Describes the property traits as a collection of unique items",
             "name": "traits",
             "typeName": "NcPropertyTrait",
             "isNullable": false,
