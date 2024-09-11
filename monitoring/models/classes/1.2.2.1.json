@@ -108,10 +108,24 @@
       "constraints": null
     },
     {
-      "description": "Stream status property",
+      "description": "Synchronization source changes counter",
       "id": {
         "level": 4,
         "index": 8
+      },
+      "name": "synchronizationSourceChanges",
+      "typeName": "NcUint64",
+      "isReadOnly": true,
+      "isNullable": true,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
+    },
+    {
+      "description": "Stream status property",
+      "id": {
+        "level": 4,
+        "index": 9
       },
       "name": "streamStatus",
       "typeName": "NcStreamStatus",
@@ -125,7 +139,7 @@
       "description": "Stream status message property",
       "id": {
         "level": 4,
-        "index": 9
+        "index": 10
       },
       "name": "streamStatusMessage",
       "typeName": "NcString",
@@ -139,7 +153,7 @@
       "description": "Automatic reset packet counters property (default: true)",
       "id": {
         "level": 4,
-        "index": 10
+        "index": 11
       },
       "name": "autoResetPacketCounters",
       "typeName": "NcBoolean",
@@ -185,12 +199,12 @@
       "isDeprecated": false
     },
     {
-      "description": "Approves the current synchronization source",
+      "description": "Resets the synchronization source changes counter property",
       "id": {
         "level": 4,
         "index": 4
       },
-      "name": "ApproveCurrentSynchronizationSource",
+      "name": "ResetSynchronizationSourceChanges",
       "resultDatatype": "NcMethodResult",
       "parameters": [],
       "isDeprecated": false
