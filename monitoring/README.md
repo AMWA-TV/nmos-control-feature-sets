@@ -132,7 +132,7 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     [element("4p5")]     readonly    attribute    NcSynchronizationStatus    externalSynchronizationStatus;    // External synchronization status property
     [element("4p6")]     readonly    attribute    NcString?    externalSynchronizationStatusMessage;    // External synchronization status message property
     [element("4p7")]     readonly    attribute    NcString?    synchronizationSourceId;    // Synchronization source id property
-    [element("4p8")]     readonly    attribute    NcUint64?    synchronizationSourceChanges;    // Synchronization source changes counter
+    [element("4p8")]     readonly    attribute    NcUint64    synchronizationSourceChanges;    // Synchronization source changes counter
     [element("4p9")]     readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
     [element("4p10")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
     [element("4p11")]                attribute    NcBoolean    autoResetPacketCounters;    // Automatic reset packet counters property (default: true)

@@ -116,7 +116,7 @@
       "name": "synchronizationSourceChanges",
       "typeName": "NcUint64",
       "isReadOnly": true,
-      "isNullable": true,
+      "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
       "constraints": null
