@@ -9,7 +9,8 @@ Includes models for control classes and datatypes used for device configuration 
     - [NcObjectPropertiesHolder](#ncobjectpropertiesholder)
     - [NcBulkValuesHolder](#ncbulkvaluesholder)
     - [NcRestoreValidationStatus](#ncrestorevalidationstatus)
-    - [NcPropertyRestoreException](#ncpropertyrestoreexception)
+    - [NcPropertyRestoreNoticeType](#ncpropertyrestorenoticetype)
+    - [NcPropertyRestoreNotice](#ncpropertyrestorenotice)
     - [NcObjectPropertiesSetValidation](#ncobjectpropertiessetvalidation)
     - [NcMethodResultBulkValuesHolder](#ncmethodresultbulkvaluesholder)
     - [NcMethodResultObjectPropertiesSetValidation](#ncmethodresultobjectpropertiessetvalidation)
@@ -70,22 +71,31 @@ interface NcBulkValuesHolder {
 // Restore validation status enumeration
 enum NcRestoreValidationStatus {
     "Ok",                   // 200 Restore was successful
-    "PartiallyOk",          // 206 Restore was partially successful
     "Excluded",             // 210 Excluded from restore due to data provided in the request
-    "InvalidData",          // 400 Restore failed because relevant backup data set provided is invalid
+    "Failed",               // 400 Restore failed
     "NotFound",             // 404 Restore failed because the role path is not found in the device model or the device cannot create the role path from the data set
-    "MissingDependency",    // 424 Restore failed because of missing dependency information in the relevant backup data set
     "DeviceError",          // 500 Restore failed due to an internal device error preventing the restore from happening
 };
 ```
 
-### NcPropertyRestoreException
+### NcPropertyRestoreNoticeType
 
 ```typescript
-interface NcPropertyRestoreException {
-    attribute NcPropertyId    id;               // Property id
-    attribute NcName    name;                   // Property name
-    attribute NcString    exceptionMessage;     // Property restore exception message
+// Property restore notice type enumeration
+enum NcPropertyRestoreNoticeType {
+    "Warning",      // 300 Warning property restore notice
+    "Error",        // 400 Error property restore notice
+};
+```
+
+### NcPropertyRestoreNotice
+
+```typescript
+interface NcPropertyRestoreNotice {
+    attribute NcPropertyId    id;                           // Property id
+    attribute NcName    name;                               // Property name
+    attribute NcPropertyRestoreNoticeType    noticeType;    // Property restore notice type
+    attribute NcString    noticeMessage;                    // Property restore notice message
 };
 ```
 
@@ -95,7 +105,7 @@ interface NcPropertyRestoreException {
 interface NcObjectPropertiesSetValidation {
     attribute NcRolePath    path;                                   // Object role path
     attribute NcRestoreValidationStatus    status;                  // Validation status
-    attribute sequence<NcPropertyRestoreException>    exceptions;   // Validation property exceptions
+    attribute sequence<NcPropertyRestoreNotice>    notices;         // Validation property notices
     attribute NcString?    statusMessage;                           // Validation status message
 };
 ```
