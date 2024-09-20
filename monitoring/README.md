@@ -7,13 +7,16 @@ Includes models for control classes and datatypes used for monitoring.
     - [NcOverallStatus](#ncoverallstatus)
     - [NcLinkStatus](#nclinkstatus)
     - [NcConnectionStatus](#ncconnectionstatus)
+    - [NcTransmissionStatus](#nctransmissionstatus)
     - [NcSynchronizationStatus](#ncsynchronizationstatus)
     - [NcStreamStatus](#ncstreamstatus)
+    - [NcEssenceStatus](#ncessencestatus)
     - [NcPacketCounter](#ncpacketcounter)
     - [NcMethodResultCounters](#ncmethodresultcounters)
   - [Control classes](#control-classes)
     - [NcStatusMonitor](#ncstatusmonitor)
     - [NcReceiverMonitor](#ncreceivermonitor)
+    - [NcSenderMonitor](#ncsendermonitor)
 
 ## Datatypes
 
@@ -52,6 +55,18 @@ enum NcConnectionStatus {
 };
 ```
 
+### NcTransmissionStatus
+
+```typescript
+// Transmission status enum data type
+enum NcTransmissionStatus {
+    "Inactive",          // 0 Inactive
+    "Healthy",           // 1 Active and healthy
+    "PartiallyHealthy",  // 2 Active and partially healthy
+    "Unhealthy"          // 3 Active and unhealthy
+};
+```
+
 ### NcSynchronizationStatus
 
 ```typescript
@@ -69,6 +84,18 @@ enum NcSynchronizationStatus {
 ```typescript
 // Stream status enum data type
 enum NcStreamStatus {
+    "Inactive",          // 0 Inactive
+    "Healthy",           // 1 Active and healthy
+    "PartiallyHealthy",  // 2 Active and partially healthy
+    "Unhealthy"          // 3 Active and unhealthy
+};
+```
+
+### NcEssenceStatus
+
+```typescript
+// Essence status enum data type
+enum NcEssenceStatus {
     "Inactive",          // 0 Inactive
     "Healthy",           // 1 Active and healthy
     "PartiallyHealthy",  // 2 Active and partially healthy
@@ -135,6 +162,45 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     [element("4p8")]     readonly    attribute    NcUint64    synchronizationSourceChanges;    // Synchronization source changes counter
     [element("4p9")]     readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
     [element("4p10")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
+    [element("4p11")]                attribute    NcBoolean    autoResetPacketCounters;    // Automatic reset packet counters property (default: true)
+
+    // Gets the lost packet counters
+    [element("4m1")]    NcMethodResultCounters GetLostPacketCounters();
+
+    // Gets the late packet counters
+    [element("4m2")]    NcMethodResultCounters GetLatePacketCounters();
+
+    // Resets the packet counters
+    [element("4m3")]    NcMethodResult ResetPacketCounters();
+
+    // Resets the synchronization source changes counter property
+    [element("4m4")]    NcMethodResult ResetSynchronizationSourceChanges();
+};
+```
+
+### NcSenderMonitor
+
+Sender monitoring class required for expressing statuses of different domains (connectivity, synchronization, essence validation).
+
+Because it derives from the baseline [NcStatusMonitor](#ncstatusmonitor) it will also expose an `overallStatus` property.
+
+It uses the Touchpoint mechanism inherited from NcObject to attach to the correct sender identity.
+
+Sender monitors MUST maintain a 1 to 1 relationship between their role and the touchpoint sender entity they monitor as long as the sender entity hasn't been disposed by the device.
+
+```typescript
+// Sender monitor class descriptor
+[control-class("1.2.2.2")] interface NcSenderMonitor: NcStatusMonitor {
+    [element("4p1")]     readonly    attribute    NcLinkStatus    linkStatus;    // Link status property
+    [element("4p2")]     readonly    attribute    NcString?    linkStatusMessage;    // Link status message property
+    [element("4p3")]     readonly    attribute    NcTransmissionStatus    transmissionStatus;    // Transmission status property
+    [element("4p4")]     readonly    attribute    NcString?    transmissionStatusMessage;    // Transmission status message property
+    [element("4p5")]     readonly    attribute    NcSynchronizationStatus    externalSynchronizationStatus;    // External synchronization status property
+    [element("4p6")]     readonly    attribute    NcString?    externalSynchronizationStatusMessage;    // External synchronization status message property
+    [element("4p7")]     readonly    attribute    NcString?    synchronizationSourceId;    // Synchronization source id property
+    [element("4p8")]     readonly    attribute    NcUint64    synchronizationSourceChanges;    // Synchronization source changes counter
+    [element("4p9")]     readonly    attribute    NcEssenceStatus    essenceStatus;    // Essence status property
+    [element("4p10")]    readonly    attribute    NcString?    essenceStatusMessage;    // Essence status message property
     [element("4p11")]                attribute    NcBoolean    autoResetPacketCounters;    // Automatic reset packet counters property (default: true)
 
     // Gets the lost packet counters
