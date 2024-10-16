@@ -9,11 +9,6 @@
       "value": 200
     },
     {
-      "description": "Excluded from restore due to data provided in the request",
-      "name": "Excluded",
-      "value": 210
-    },
-    {
       "description": "Restore failed",
       "name": "Failed",
       "value": 400

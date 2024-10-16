@@ -71,11 +71,11 @@
           "constraints": null
         },
         {
-          "description": "If left null then all properties regardless of their traits will be validated for restore. When populated (not null) only properties with these specific traits are validated for restore",
-          "name": "propertyTraits",
-          "typeName": "NcPropertyTrait",
-          "isNullable": true,
-          "isSequence": true,
+          "description": "Defines the restore mode to be applied",
+          "name": "restoreMode",
+          "typeName": "NcRestoreMode",
+          "isNullable": false,
+          "isSequence": false,
           "constraints": null
         }
       ],
@@ -115,11 +115,11 @@
           "constraints": null
         },
         {
-          "description": "If left null then all properties regardless of their traits will be included in the restore. When populated (not null) only properties with these specific traits are included in the restore",
-          "name": "propertyTraits",
-          "typeName": "NcPropertyTrait",
-          "isNullable": true,
-          "isSequence": true,
+          "description": "Defines the restore mode to be applied",
+          "name": "restoreMode",
+          "typeName": "NcRestoreMode",
+          "isNullable": false,
+          "isSequence": false,
           "constraints": null
         }
       ],

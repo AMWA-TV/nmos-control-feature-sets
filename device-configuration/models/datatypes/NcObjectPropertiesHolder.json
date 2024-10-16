@@ -18,6 +18,14 @@
             "isNullable": false,
             "isSequence": true,
             "constraints": null
+        },
+        {
+            "description": "Describes if the object is rebuildable",
+            "name": "isRebuildable",
+            "typeName": "NcBoolean",
+            "isNullable": false,
+            "isSequence": false,
+            "constraints": null
         }
     ],
     "parentType": null,
