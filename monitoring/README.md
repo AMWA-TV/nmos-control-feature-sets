@@ -202,13 +202,13 @@ Sender monitors MUST maintain a 1 to 1 relationship between their role and the t
     [element("4p8")]     readonly    attribute    NcUint64    synchronizationSourceChanges;    // Synchronization source changes counter
     [element("4p9")]     readonly    attribute    NcEssenceStatus    essenceStatus;    // Essence status property
     [element("4p10")]    readonly    attribute    NcString?    essenceStatusMessage;    // Essence status message property
-    [element("4p11")]                attribute    NcBoolean    autoResetTransmissionErrorCounters;    // Automatic reset transmission error counters property (default: true)
+    [element("4p11")]                attribute    NcBoolean    autoResetErrorCounters;    // Automatic reset error counters property (default: true)
 
     // Gets the transmission error counters
     [element("4m1")]    NcMethodResultCounters GetTransmissionErrorCounters();
 
-    // Resets the transmission error counters
-    [element("4m2")]    NcMethodResult ResetTransmissionErrorCounters();
+    // Resets the error counters
+    [element("4m2")]    NcMethodResult ResetErrorCounters();
 
     // Resets the synchronization source changes counter property
     [element("4m3")]    NcMethodResult ResetSynchronizationSourceChanges();

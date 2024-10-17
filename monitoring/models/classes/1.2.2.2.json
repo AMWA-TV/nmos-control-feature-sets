@@ -150,12 +150,12 @@
       "constraints": null
     },
     {
-      "description": "Automatic reset transmission error counters property (default: true)",
+      "description": "Automatic reset error counters property (default: true)",
       "id": {
         "level": 4,
         "index": 11
       },
-      "name": "autoResetTransmissionErrorCounters",
+      "name": "autoResetErrorCounters",
       "typeName": "NcBoolean",
       "isReadOnly": true,
       "isNullable": false,
@@ -177,12 +177,12 @@
       "isDeprecated": false
     },
     {
-      "description": "Resets the transmission error counters",
+      "description": "Resets the error counters",
       "id": {
         "level": 4,
         "index": 2
       },
-      "name": "ResetTransmissionErrorCounters",
+      "name": "ResetErrorCounters",
       "resultDatatype": "NcMethodResult",
       "parameters": [],
       "isDeprecated": false
