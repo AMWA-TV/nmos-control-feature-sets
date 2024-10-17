@@ -11,7 +11,7 @@ Includes models for control classes and datatypes used for monitoring.
     - [NcSynchronizationStatus](#ncsynchronizationstatus)
     - [NcStreamStatus](#ncstreamstatus)
     - [NcEssenceStatus](#ncessencestatus)
-    - [NcPacketCounter](#ncpacketcounter)
+    - [NcCounter](#nccounter)
     - [NcMethodResultCounters](#ncmethodresultcounters)
   - [Control classes](#control-classes)
     - [NcStatusMonitor](#ncstatusmonitor)
@@ -103,13 +103,14 @@ enum NcEssenceStatus {
 };
 ```
 
-### NcPacketCounter
+### NcCounter
 
 ```typescript
-// Packet counter data type
-interface NcPacketCounter {
-    attribute NcString    name; // Counter name
-    attribute NcUint64    value; // Counter value
+// Counter data type
+interface NcCounter {
+    attribute NcString     name; // Counter name
+    attribute NcUint64     value; // Counter value
+    attribute NcString?    description; // Optional counter description
 };
 ```
 
@@ -118,7 +119,7 @@ interface NcPacketCounter {
 ```typescript
 // Counters method result
 interface NcMethodResultCounters: NcMethodResult {
-    attribute sequence<NcPacketCounter>    value; // Counters
+    attribute sequence<NcCounter>    value; // Counters
 };
 ```
 
@@ -201,18 +202,15 @@ Sender monitors MUST maintain a 1 to 1 relationship between their role and the t
     [element("4p8")]     readonly    attribute    NcUint64    synchronizationSourceChanges;    // Synchronization source changes counter
     [element("4p9")]     readonly    attribute    NcEssenceStatus    essenceStatus;    // Essence status property
     [element("4p10")]    readonly    attribute    NcString?    essenceStatusMessage;    // Essence status message property
-    [element("4p11")]                attribute    NcBoolean    autoResetPacketCounters;    // Automatic reset packet counters property (default: true)
+    [element("4p11")]                attribute    NcBoolean    autoResetTransmissionErrorCounters;    // Automatic reset transmission error counters property (default: true)
 
-    // Gets the lost packet counters
-    [element("4m1")]    NcMethodResultCounters GetLostPacketCounters();
+    // Gets the transmission error counters
+    [element("4m1")]    NcMethodResultCounters GetTransmissionErrorCounters();
 
-    // Gets the late packet counters
-    [element("4m2")]    NcMethodResultCounters GetLatePacketCounters();
-
-    // Resets the packet counters
-    [element("4m3")]    NcMethodResult ResetPacketCounters();
+    // Resets the transmission error counters
+    [element("4m2")]    NcMethodResult ResetTransmissionErrorCounters();
 
     // Resets the synchronization source changes counter property
-    [element("4m4")]    NcMethodResult ResetSynchronizationSourceChanges();
+    [element("4m3")]    NcMethodResult ResetSynchronizationSourceChanges();
 };
 ```

@@ -6,7 +6,7 @@
     {
       "description": "Counters",
       "name": "value",
-      "typeName": "NcPacketCounter",
+      "typeName": "NcCounter",
       "isNullable": false,
       "isSequence": true,
       "constraints": null

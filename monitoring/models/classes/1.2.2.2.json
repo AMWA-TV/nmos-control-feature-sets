@@ -150,12 +150,12 @@
       "constraints": null
     },
     {
-      "description": "Automatic reset packet counters property (default: true)",
+      "description": "Automatic reset transmission error counters property (default: true)",
       "id": {
         "level": 4,
         "index": 11
       },
-      "name": "autoResetPacketCounters",
+      "name": "autoResetTransmissionErrorCounters",
       "typeName": "NcBoolean",
       "isReadOnly": true,
       "isNullable": false,
@@ -166,34 +166,23 @@
   ],
   "methods": [
     {
-      "description": "Gets the lost packet counters",
+      "description": "Gets the transmission error counters",
       "id": {
         "level": 4,
         "index": 1
       },
-      "name": "GetLostPacketCounters",
+      "name": "GetTransmissionErrorCounters",
       "resultDatatype": "NcMethodResultCounters",
       "parameters": [],
       "isDeprecated": false
     },
     {
-      "description": "Gets the late packet counters",
+      "description": "Resets the transmission error counters",
       "id": {
         "level": 4,
         "index": 2
       },
-      "name": "GetLatePacketCounters",
-      "resultDatatype": "NcMethodResultCounters",
-      "parameters": [],
-      "isDeprecated": false
-    },
-    {
-      "description": "Resets the packet counters",
-      "id": {
-        "level": 4,
-        "index": 3
-      },
-      "name": "ResetPacketCounters",
+      "name": "ResetTransmissionErrorCounters",
       "resultDatatype": "NcMethodResult",
       "parameters": [],
       "isDeprecated": false
@@ -202,7 +191,7 @@
       "description": "Resets the synchronization source changes counter property",
       "id": {
         "level": 4,
-        "index": 4
+        "index": 3
       },
       "name": "ResetSynchronizationSourceChanges",
       "resultDatatype": "NcMethodResult",
