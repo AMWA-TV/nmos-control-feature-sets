@@ -157,7 +157,7 @@
       },
       "name": "autoResetErrorCounters",
       "typeName": "NcBoolean",
-      "isReadOnly": true,
+      "isReadOnly": false,
       "isNullable": false,
       "isSequence": false,
       "isDeprecated": false,
