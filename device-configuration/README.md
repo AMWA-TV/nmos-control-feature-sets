@@ -142,7 +142,7 @@ It also allows pre-validation of a data set before attempting to use in setting 
     [element("3m2")]    NcMethodResultObjectPropertiesSetValidation ValidateSetPropertiesByPath(
         NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath path,    // The target role path
-        NcBoolean recurse,    // If true will validate properties on target path and all the nested paths,
+        NcBoolean recurse,    // If true will validate properties on target path and all the nested paths
         NcRestoreMode restoreMode  // Defines the restore mode to be applied
     );
 
