@@ -47,6 +47,7 @@ interface NcPropertyValueHolder {
 ```typescript
 interface NcObjectPropertiesHolder {
     attribute NcRolePath    path; // Object role path
+    attribute sequence<NcRolePath>    dependencyPaths; // Sequence of role paths which are a dependency for this object (helpful to inform clients which objects need to be restored together)
     attribute sequence<NcPropertyValueHolder>    values; // Object properties values
     attribute NcBoolean    isRebuildable; // Describes if the object is rebuildable
 };

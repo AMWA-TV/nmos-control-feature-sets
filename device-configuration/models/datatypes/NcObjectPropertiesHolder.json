@@ -12,6 +12,14 @@
             "constraints": null
         },
         {
+            "description": "Sequence of role paths which are a dependency for this object (helpful to inform clients which objects need to be restored together)",
+            "name": "dependencyPaths",
+            "typeName": "NcRolePath",
+            "isNullable": false,
+            "isSequence": true,
+            "constraints": null
+        },
+        {
             "description": "Object properties values",
             "name": "values",
             "typeName": "NcPropertyValueHolder",
