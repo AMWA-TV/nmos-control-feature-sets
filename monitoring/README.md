@@ -164,6 +164,7 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     [element("4p9")]     readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
     [element("4p10")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
     [element("4p11")]                attribute    NcBoolean    autoResetPacketCounters;    // Automatic reset packet counters property (default: true)
+    [element("4p12")]                attribute    NcBoolean    autoResetSynchronizationSourceChanges;    // Automatic reset synchronization source changes property (default: true)
 
     // Gets the lost packet counters
     [element("4m1")]    NcMethodResultCounters GetLostPacketCounters();
@@ -203,6 +204,7 @@ Sender monitors MUST maintain a 1 to 1 relationship between their role and the t
     [element("4p9")]     readonly    attribute    NcEssenceStatus    essenceStatus;    // Essence status property
     [element("4p10")]    readonly    attribute    NcString?    essenceStatusMessage;    // Essence status message property
     [element("4p11")]                attribute    NcBoolean    autoResetErrorCounters;    // Automatic reset error counters property (default: true)
+    [element("4p12")]                attribute    NcBoolean    autoResetSynchronizationSourceChanges;    // Automatic reset synchronization source changes property (default: true)
 
     // Gets the transmission error counters
     [element("4m1")]    NcMethodResultCounters GetTransmissionErrorCounters();

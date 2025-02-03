@@ -162,6 +162,20 @@
       "isSequence": false,
       "isDeprecated": false,
       "constraints": null
+    },
+    {
+      "description": "Automatic reset synchronization source changes property (default: true)",
+      "id": {
+        "level": 4,
+        "index": 12
+      },
+      "name": "autoResetSynchronizationSourceChanges",
+      "typeName": "NcBoolean",
+      "isReadOnly": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
     }
   ],
   "methods": [
