@@ -38,10 +38,24 @@
       "constraints": null
     },
     {
-      "description": "Connection status property",
+      "description": "Link status transition counter property",
       "id": {
         "level": 4,
         "index": 3
+      },
+      "name": "linkStatusTransitionCounter",
+      "typeName": "NcUint64",
+      "isReadOnly": true,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
+    },
+    {
+      "description": "Connection status property",
+      "id": {
+        "level": 4,
+        "index": 4
       },
       "name": "connectionStatus",
       "typeName": "NcConnectionStatus",
@@ -55,7 +69,7 @@
       "description": "Connection status message property",
       "id": {
         "level": 4,
-        "index": 4
+        "index": 5
       },
       "name": "connectionStatusMessage",
       "typeName": "NcString",
@@ -66,10 +80,24 @@
       "constraints": null
     },
     {
+      "description": "Connection status transition counter property",
+      "id": {
+        "level": 4,
+        "index": 6
+      },
+      "name": "connectionStatusTransitionCounter",
+      "typeName": "NcUint64",
+      "isReadOnly": true,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
+    },
+    {
       "description": "External synchronization status property",
       "id": {
         "level": 4,
-        "index": 5
+        "index": 7
       },
       "name": "externalSynchronizationStatus",
       "typeName": "NcSynchronizationStatus",
@@ -83,7 +111,7 @@
       "description": "External synchronization status message property",
       "id": {
         "level": 4,
-        "index": 6
+        "index": 8
       },
       "name": "externalSynchronizationStatusMessage",
       "typeName": "NcString",
@@ -94,10 +122,24 @@
       "constraints": null
     },
     {
+      "description": "External synchronization status transition counter property",
+      "id": {
+        "level": 4,
+        "index": 9
+      },
+      "name": "externalSynchronizationStatusTransitionCounter",
+      "typeName": "NcUint64",
+      "isReadOnly": true,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
+    },
+    {
       "description": "Synchronization source id property",
       "id": {
         "level": 4,
-        "index": 7
+        "index": 10
       },
       "name": "synchronizationSourceId",
       "typeName": "NcString",
@@ -111,7 +153,7 @@
       "description": "Synchronization source changes counter",
       "id": {
         "level": 4,
-        "index": 8
+        "index": 11
       },
       "name": "synchronizationSourceChanges",
       "typeName": "NcUint64",
@@ -125,7 +167,7 @@
       "description": "Stream status property",
       "id": {
         "level": 4,
-        "index": 9
+        "index": 12
       },
       "name": "streamStatus",
       "typeName": "NcStreamStatus",
@@ -139,7 +181,7 @@
       "description": "Stream status message property",
       "id": {
         "level": 4,
-        "index": 10
+        "index": 13
       },
       "name": "streamStatusMessage",
       "typeName": "NcString",
@@ -150,10 +192,24 @@
       "constraints": null
     },
     {
+      "description": "Stream status transition counter property",
+      "id": {
+        "level": 4,
+        "index": 14
+      },
+      "name": "streamStatusTransitionCounter",
+      "typeName": "NcUint64",
+      "isReadOnly": true,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
+    },
+    {
       "description": "Automatic reset packet counters property (default: true)",
       "id": {
         "level": 4,
-        "index": 11
+        "index": 15
       },
       "name": "autoResetPacketCounters",
       "typeName": "NcBoolean",
@@ -167,9 +223,23 @@
       "description": "Automatic reset synchronization source changes property (default: true)",
       "id": {
         "level": 4,
-        "index": 12
+        "index": 16
       },
       "name": "autoResetSynchronizationSourceChanges",
+      "typeName": "NcBoolean",
+      "isReadOnly": false,
+      "isNullable": false,
+      "isSequence": false,
+      "isDeprecated": false,
+      "constraints": null
+    },
+    {
+      "description": "Automatic reset status transition counters property (default: true)",
+      "id": {
+        "level": 4,
+        "index": 17
+      },
+      "name": "autoResetStatusTransitionCounters",
       "typeName": "NcBoolean",
       "isReadOnly": false,
       "isNullable": false,
@@ -219,6 +289,17 @@
         "index": 4
       },
       "name": "ResetSynchronizationSourceChanges",
+      "resultDatatype": "NcMethodResult",
+      "parameters": [],
+      "isDeprecated": false
+    },
+    {
+      "description": "Resets ALL status transition counter properties",
+      "id": {
+        "level": 4,
+        "index": 5
+      },
+      "name": "ResetStatusTransitionCounters",
       "resultDatatype": "NcMethodResult",
       "parameters": [],
       "isDeprecated": false
