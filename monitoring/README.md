@@ -163,13 +163,10 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     [element("4p8")]     readonly    attribute    NcString?    externalSynchronizationStatusMessage;    // External synchronization status message property
     [element("4p9")]     readonly    attribute    NcUint64    externalSynchronizationStatusTransitionCounter;    // External synchronization status transition counter property
     [element("4p10")]    readonly    attribute    NcString?    synchronizationSourceId;    // Synchronization source id property
-    [element("4p11")]    readonly    attribute    NcUint64    synchronizationSourceChanges;    // Synchronization source changes counter
-    [element("4p12")]    readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
-    [element("4p13")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
-    [element("4p14")]    readonly    attribute    NcUint64    streamStatusTransitionCounter;    // Stream status transition counter property
-    [element("4p15")]                attribute    NcBoolean    autoResetPacketCounters;    // Automatic reset packet counters property (default: true)
-    [element("4p16")]                attribute    NcBoolean    autoResetSynchronizationSourceChanges;    // Automatic reset synchronization source changes property (default: true)
-    [element("4p17")]                attribute    NcBoolean    autoResetStatusTransitionCounters;    // Automatic reset status transition counters property (default: true)
+    [element("4p11")]    readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
+    [element("4p12")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
+    [element("4p13")]    readonly    attribute    NcUint64    streamStatusTransitionCounter;    // Stream status transition counter property
+    [element("4p14")]                attribute    NcBoolean    autoResetCounters;    // Automatic reset counters property (default: true)
 
     // Gets the lost packet counters
     [element("4m1")]    NcMethodResultCounters GetLostPacketCounters();
@@ -177,14 +174,8 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     // Gets the late packet counters
     [element("4m2")]    NcMethodResultCounters GetLatePacketCounters();
 
-    // Resets the packet counters
-    [element("4m3")]    NcMethodResult ResetPacketCounters();
-
-    // Resets the synchronization source changes counter property
-    [element("4m4")]    NcMethodResult ResetSynchronizationSourceChanges();
-
-    // Resets ALL status transition counter properties
-    [element("4m5")]    NcMethodResult ResetStatusTransitionCounters();
+    // Resets ALL counters
+    [element("4m3")]    NcMethodResult ResetCounters();
 };
 ```
 
@@ -211,24 +202,15 @@ Sender monitors MUST maintain a 1 to 1 relationship between their role and the t
     [element("4p8")]     readonly    attribute    NcString?    externalSynchronizationStatusMessage;    // External synchronization status message property
     [element("4p9")]     readonly    attribute    NcUint64    externalSynchronizationStatusTransitionCounter;    // External synchronization status transition counter property
     [element("4p10")]    readonly    attribute    NcString?    synchronizationSourceId;    // Synchronization source id property
-    [element("4p11")]    readonly    attribute    NcUint64    synchronizationSourceChanges;    // Synchronization source changes counter
-    [element("4p12")]    readonly    attribute    NcEssenceStatus    essenceStatus;    // Essence status property
-    [element("4p13")]    readonly    attribute    NcString?    essenceStatusMessage;    // Essence status message property
-    [element("4p14")]    readonly    attribute    NcUint64    essenceStatusTransitionCounter;    // Essence status transition counter property
-    [element("4p15")]                attribute    NcBoolean    autoResetErrorCounters;    // Automatic reset error counters property (default: true)
-    [element("4p16")]                attribute    NcBoolean    autoResetSynchronizationSourceChanges;    // Automatic reset synchronization source changes property (default: true)
-    [element("4p17")]                attribute    NcBoolean    autoResetStatusTransitionCounters;    // Automatic reset status transition counters property (default: true)
+    [element("4p11")]    readonly    attribute    NcEssenceStatus    essenceStatus;    // Essence status property
+    [element("4p12")]    readonly    attribute    NcString?    essenceStatusMessage;    // Essence status message property
+    [element("4p13")]    readonly    attribute    NcUint64    essenceStatusTransitionCounter;    // Essence status transition counter property
+    [element("4p14")]                attribute    NcBoolean    autoResetCounters;    // Automatic reset counters property (default: true)
 
     // Gets the transmission error counters
     [element("4m1")]    NcMethodResultCounters GetTransmissionErrorCounters();
 
-    // Resets the error counters
-    [element("4m2")]    NcMethodResult ResetErrorCounters();
-
-    // Resets the synchronization source changes counter property
-    [element("4m3")]    NcMethodResult ResetSynchronizationSourceChanges();
-
-    // Resets ALL status transition counter properties
-    [element("4m4")]    NcMethodResult ResetStatusTransitionCounters();
+    // Resets ALL counters
+    [element("4m2")]    NcMethodResult ResetCounters();
 };
 ```

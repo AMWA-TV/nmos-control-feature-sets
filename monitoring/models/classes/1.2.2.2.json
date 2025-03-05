@@ -150,24 +150,10 @@
       "constraints": null
     },
     {
-      "description": "Synchronization source changes counter",
-      "id": {
-        "level": 4,
-        "index": 11
-      },
-      "name": "synchronizationSourceChanges",
-      "typeName": "NcUint64",
-      "isReadOnly": true,
-      "isNullable": false,
-      "isSequence": false,
-      "isDeprecated": false,
-      "constraints": null
-    },
-    {
       "description": "Essence status property",
       "id": {
         "level": 4,
-        "index": 12
+        "index": 11
       },
       "name": "essenceStatus",
       "typeName": "NcEssenceStatus",
@@ -181,7 +167,7 @@
       "description": "Essence status message property",
       "id": {
         "level": 4,
-        "index": 13
+        "index": 12
       },
       "name": "essenceStatusMessage",
       "typeName": "NcString",
@@ -195,7 +181,7 @@
       "description": "Essence status transition counter property",
       "id": {
         "level": 4,
-        "index": 14
+        "index": 13
       },
       "name": "essenceStatusTransitionCounter",
       "typeName": "NcUint64",
@@ -206,40 +192,12 @@
       "constraints": null
     },
     {
-      "description": "Automatic reset error counters property (default: true)",
+      "description": "Automatic reset counters property (default: true)",
       "id": {
         "level": 4,
-        "index": 15
+        "index": 14
       },
-      "name": "autoResetErrorCounters",
-      "typeName": "NcBoolean",
-      "isReadOnly": false,
-      "isNullable": false,
-      "isSequence": false,
-      "isDeprecated": false,
-      "constraints": null
-    },
-    {
-      "description": "Automatic reset synchronization source changes property (default: true)",
-      "id": {
-        "level": 4,
-        "index": 16
-      },
-      "name": "autoResetSynchronizationSourceChanges",
-      "typeName": "NcBoolean",
-      "isReadOnly": false,
-      "isNullable": false,
-      "isSequence": false,
-      "isDeprecated": false,
-      "constraints": null
-    },
-    {
-      "description": "Automatic reset status transition counters property (default: true)",
-      "id": {
-        "level": 4,
-        "index": 17
-      },
-      "name": "autoResetStatusTransitionCounters",
+      "name": "autoResetCounters",
       "typeName": "NcBoolean",
       "isReadOnly": false,
       "isNullable": false,
@@ -261,34 +219,12 @@
       "isDeprecated": false
     },
     {
-      "description": "Resets the error counters",
+      "description": "Resets ALL counters",
       "id": {
         "level": 4,
         "index": 2
       },
-      "name": "ResetErrorCounters",
-      "resultDatatype": "NcMethodResult",
-      "parameters": [],
-      "isDeprecated": false
-    },
-    {
-      "description": "Resets the synchronization source changes counter property",
-      "id": {
-        "level": 4,
-        "index": 3
-      },
-      "name": "ResetSynchronizationSourceChanges",
-      "resultDatatype": "NcMethodResult",
-      "parameters": [],
-      "isDeprecated": false
-    },
-    {
-      "description": "Resets ALL status transition counter properties",
-      "id": {
-        "level": 4,
-        "index": 4
-      },
-      "name": "ResetStatusTransitionCounters",
+      "name": "ResetCounters",
       "resultDatatype": "NcMethodResult",
       "parameters": [],
       "isDeprecated": false
