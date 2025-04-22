@@ -144,7 +144,7 @@ All status monitors in a device model can be easily found by searching for `NcSt
 
 Receiver monitoring class required for expressing statuses of different domains (connectivity, synchronization, stream validation).
 
-Because it derives from the baseline [NcStatusMonitor](#ncstatusmonitor) it will also expose an `overallStatus` property.
+Because it derives from the [NcStatusMonitor](#ncstatusmonitor) base class it will also expose an `overallStatus` property.
 
 It uses the Touchpoint mechanism inherited from NcObject to attach to the correct receiver identity.
 
