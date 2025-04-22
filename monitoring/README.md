@@ -183,7 +183,7 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
 
 Sender monitoring class required for expressing statuses of different domains (connectivity, synchronization, essence validation).
 
-Because it derives from the baseline [NcStatusMonitor](#ncstatusmonitor) it will also expose an `overallStatus` property.
+Because it derives from the [NcStatusMonitor](#ncstatusmonitor) base class it will also expose an `overallStatus` property.
 
 It uses the Touchpoint mechanism inherited from NcObject to attach to the correct sender identity.
 
