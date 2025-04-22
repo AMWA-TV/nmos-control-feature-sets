@@ -127,9 +127,9 @@ interface NcMethodResultCounters: NcMethodResult {
 
 ### NcStatusMonitor
 
-This is the baseline status monitoring class that all feature status monitors use.
-The goal is to make it easy for clients to find a very high level `overallStatus`.
-The other goal is that it makes it easy to find all status monitors in a device model by using the [FindMembersByClassId](https://specs.amwa.tv/ms-05-02/latest/docs/Blocks.html#search-methods) inside block classes.
+This is the base class for all feature status monitors.
+This class makes it easy for clients to determine the high level `overallStatus` of a monitor.
+All status monitors in a device model can be easily found by searching for `NcStatusMonitor`s classes using the [FindMembersByClassId](https://specs.amwa.tv/ms-05-02/latest/docs/Blocks.html#search-methods) method found in block classes.
 
 ```typescript
 // Baseline status monitoring class
