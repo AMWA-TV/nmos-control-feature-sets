@@ -146,7 +146,7 @@ Receiver monitoring class required for expressing statuses of different domains 
 
 Because it derives from the [NcStatusMonitor](#ncstatusmonitor) base class it will also expose an `overallStatus` property.
 
-It uses the Touchpoint mechanism inherited from NcObject to attach to the correct receiver identity.
+It uses the Touchpoint mechanism inherited from NcObject to identify the NMOS receiver resource being monitored.
 
 Receiver monitors MUST maintain a 1 to 1 relationship between their role and the touchpoint receiver entity they monitor as long as the receiver entity hasn't been disposed by the device.
 
