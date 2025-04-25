@@ -1,6 +1,6 @@
 {
-    "description": "Connection status enum data type",
-    "name": "NcConnectionStatus",
+    "description": "Stream status enum data type",
+    "name": "NcStreamStatus",
     "type": 3,
     "items": [
         {

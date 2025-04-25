@@ -1,6 +1,6 @@
 {
-    "description": "Connection status enum data type",
-    "name": "NcConnectionStatus",
+    "description": "Transmission status enum data type",
+    "name": "NcTransmissionStatus",
     "type": 3,
     "items": [
         {

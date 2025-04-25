@@ -1,6 +1,6 @@
 {
-    "description": "Connection status enum data type",
-    "name": "NcConnectionStatus",
+    "description": "Overall status enum data type",
+    "name": "NcOverallStatus",
     "type": 3,
     "items": [
         {
@@ -9,17 +9,17 @@
             "value": 0
         },
         {
-            "description": "Active and healthy",
+            "description": "The overall status is healthy",
             "name": "Healthy",
             "value": 1
         },
         {
-            "description": "Active and partially healthy",
+            "description": "The overall status is partially healthy",
             "name": "PartiallyHealthy",
             "value": 2
         },
         {
-            "description": "Active and unhealthy",
+            "description": "The overall status is unhealthy",
             "name": "Unhealthy",
             "value": 3
         }
