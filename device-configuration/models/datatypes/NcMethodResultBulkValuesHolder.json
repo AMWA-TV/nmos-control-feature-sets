@@ -1,0 +1,17 @@
+{
+  "description": "Bulk values holder method result",
+  "name": "NcMethodResultBulkValuesHolder",
+  "type": 2,
+  "fields": [
+    {
+      "description": "Bulk values holder value",
+      "name": "value",
+      "typeName": "NcBulkValuesHolder",
+      "isNullable": false,
+      "isSequence": false,
+      "constraints": null
+    }
+  ],
+  "parentType": "NcMethodResult",
+  "constraints": null
+}
