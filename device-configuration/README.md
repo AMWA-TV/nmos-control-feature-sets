@@ -127,8 +127,8 @@ interface NcMethodResultObjectPropertiesSetValidation: NcMethodResult {
 
 ### NcBulkPropertiesManager
 
-The `BulkPropertiesManager` offers a central model for getting and setting properties of multiple role paths.
-It also allows pre-validation of a data set before attempting to use in setting multiple properties of multiple role paths.
+The `BulkPropertiesManager` offers a central model for getting and setting multiple properties on multiple role paths.
+It also allows pre-validation of a data set before attempting these get and set operations.
 
 ```typescript
 // NcBulkPropertiesManager class descriptor
