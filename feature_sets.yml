@@ -4,3 +4,6 @@
 - id: monitoring
   name: Monitoring
   show_in_index: true
+- id: device-configuration
+  name: Device configuration
+  show_in_index: true
