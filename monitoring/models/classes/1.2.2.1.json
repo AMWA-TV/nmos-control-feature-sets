@@ -192,12 +192,12 @@
       "constraints": null
     },
     {
-      "description": "Automatic reset counters property (default: true)",
+      "description": "Automatic reset counters and status messages property (default: true)",
       "id": {
         "level": 4,
         "index": 14
       },
-      "name": "autoResetCounters",
+      "name": "autoResetCountersAndMessages",
       "typeName": "NcBoolean",
       "isReadOnly": false,
       "isNullable": false,
@@ -230,12 +230,12 @@
       "isDeprecated": false
     },
     {
-      "description": "Resets ALL counters",
+      "description": "Resets ALL counters and status messages",
       "id": {
         "level": 4,
         "index": 3
       },
-      "name": "ResetCounters",
+      "name": "ResetCountersAndMessages",
       "resultDatatype": "NcMethodResult",
       "parameters": [],
       "isDeprecated": false
