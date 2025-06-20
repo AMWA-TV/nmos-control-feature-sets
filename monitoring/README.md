@@ -166,7 +166,7 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     [element("4p11")]    readonly    attribute    NcStreamStatus    streamStatus;    // Stream status property
     [element("4p12")]    readonly    attribute    NcString?    streamStatusMessage;    // Stream status message property
     [element("4p13")]    readonly    attribute    NcUint64    streamStatusTransitionCounter;    // Stream status transition counter property
-    [element("4p14")]                attribute    NcBoolean    autoResetCounters;    // Automatic reset counters property (default: true)
+    [element("4p14")]                attribute    NcBoolean    autoResetCountersAndMessages;    // Automatic reset counters and status messages property (default: true)
 
     // Gets the lost packet counters
     [element("4m1")]    NcMethodResultCounters GetLostPacketCounters();
@@ -174,8 +174,8 @@ Receiver monitors MUST maintain a 1 to 1 relationship between their role and the
     // Gets the late packet counters
     [element("4m2")]    NcMethodResultCounters GetLatePacketCounters();
 
-    // Resets ALL counters
-    [element("4m3")]    NcMethodResult ResetCounters();
+    // Resets ALL counters and status messages
+    [element("4m3")]    NcMethodResult ResetCountersAndMessages();
 };
 ```
 
@@ -205,12 +205,12 @@ Sender monitors MUST maintain a 1 to 1 relationship between their role and the t
     [element("4p11")]    readonly    attribute    NcEssenceStatus    essenceStatus;    // Essence status property
     [element("4p12")]    readonly    attribute    NcString?    essenceStatusMessage;    // Essence status message property
     [element("4p13")]    readonly    attribute    NcUint64    essenceStatusTransitionCounter;    // Essence status transition counter property
-    [element("4p14")]                attribute    NcBoolean    autoResetCounters;    // Automatic reset counters property (default: true)
+    [element("4p14")]                attribute    NcBoolean    autoResetCountersAndMessages;    // Automatic reset counters and status messages property (default: true)
 
     // Gets the transmission error counters
     [element("4m1")]    NcMethodResultCounters GetTransmissionErrorCounters();
 
-    // Resets ALL counters
-    [element("4m2")]    NcMethodResult ResetCounters();
+    // Resets ALL counters and status messages
+    [element("4m2")]    NcMethodResult ResetCountersAndMessages();
 };
 ```
