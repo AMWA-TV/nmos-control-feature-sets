@@ -16,7 +16,7 @@
         "index": 1
       },
       "name": "GetPropertiesByPath",
-      "resultDatatype": "NcMethodResultBulkValuesHolder",
+      "resultDatatype": "NcMethodResultBulkPropertiesHolder",
       "parameters": [
         {
           "description": "The target role path",
@@ -49,7 +49,7 @@
         {
           "description": "The values offered (this may include read-only values and also paths which are not the target role path)",
           "name": "dataSet",
-          "typeName": "NcBulkValuesHolder",
+          "typeName": "NcBulkPropertiesHolder",
           "isNullable": false,
           "isSequence": false,
           "constraints": null
@@ -93,7 +93,7 @@
         {
           "description": "The values offered (this may include read-only values and also paths which are not the target role path)",
           "name": "dataSet",
-          "typeName": "NcBulkValuesHolder",
+          "typeName": "NcBulkPropertiesHolder",
           "isNullable": false,
           "isSequence": false,
           "constraints": null

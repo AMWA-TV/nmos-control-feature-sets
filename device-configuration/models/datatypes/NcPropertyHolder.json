@@ -1,6 +1,6 @@
 {
     "description": "Property value holder descriptor",
-    "name": "NcPropertyValueHolder",
+    "name": "NcPropertyHolder",
     "type": 2,
     "fields": [
         {

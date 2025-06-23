@@ -1,6 +1,6 @@
 {
-    "description": "Bulk values holder descriptor",
-    "name": "NcBulkValuesHolder",
+    "description": "Bulk properties holder descriptor",
+    "name": "NcBulkPropertiesHolder",
     "type": 2,
     "fields": [
         {
@@ -12,7 +12,7 @@
             "constraints": null
         },
         {
-            "description": "Values by rolePath",
+            "description": "Object properties holders by role path",
             "name": "values",
             "typeName": "NcObjectPropertiesHolder",
             "isNullable": false,
