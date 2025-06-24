@@ -12,7 +12,7 @@
             "constraints": null
         },
         {
-            "description": "Object properties holders by role path",
+            "description": "Object properties holders",
             "name": "values",
             "typeName": "NcObjectPropertiesHolder",
             "isNullable": false,

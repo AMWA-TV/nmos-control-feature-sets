@@ -61,7 +61,7 @@ interface NcObjectPropertiesHolder {
 // Bulk properties holder descriptor
 interface NcBulkPropertiesHolder {
     attribute NcString?    validationFingerprint; // Optional vendor specific fingerprinting mechanism used for validation purposes
-    attribute sequence<NcObjectPropertiesHolder>    values; // Object properties holders by role path
+    attribute sequence<NcObjectPropertiesHolder>    values; // Object properties holders
 };
 ```
 
