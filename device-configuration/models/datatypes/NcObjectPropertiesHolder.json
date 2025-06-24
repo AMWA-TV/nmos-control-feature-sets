@@ -30,7 +30,7 @@
         {
             "description": "Object properties values",
             "name": "values",
-            "typeName": "NcPropertyValueHolder",
+            "typeName": "NcPropertyHolder",
             "isNullable": false,
             "isSequence": true,
             "constraints": null

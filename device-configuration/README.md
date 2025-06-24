@@ -5,14 +5,14 @@ Includes models for control classes and datatypes used for device configuration 
 - [NMOS Control Feature Sets: Device configuration](#nmos-control-feature-sets-device-configuration)
   - [Datatypes](#datatypes)
     - [NcRestoreMode](#ncrestoremode)
-    - [NcPropertyValueHolder](#ncpropertyvalueholder)
+    - [NcPropertyHolder](#ncpropertyholder)
     - [NcObjectPropertiesHolder](#ncobjectpropertiesholder)
-    - [NcBulkValuesHolder](#ncbulkvaluesholder)
+    - [NcBulkPropertiesHolder](#ncbulkpropertiesholder)
     - [NcRestoreValidationStatus](#ncrestorevalidationstatus)
     - [NcPropertyRestoreNoticeType](#ncpropertyrestorenoticetype)
     - [NcPropertyRestoreNotice](#ncpropertyrestorenotice)
     - [NcObjectPropertiesSetValidation](#ncobjectpropertiessetvalidation)
-    - [NcMethodResultBulkValuesHolder](#ncmethodresultbulkvaluesholder)
+    - [NcMethodResultBulkPropertiesHolder](#ncmethodresultbulkpropertiesholder)
     - [NcMethodResultObjectPropertiesSetValidation](#ncmethodresultobjectpropertiessetvalidation)
   - [Control classes](#control-classes)
     - [NcBulkPropertiesManager](#ncbulkpropertiesmanager)
@@ -29,11 +29,11 @@ enum NcRestoreMode {
 };
 ```
 
-### NcPropertyValueHolder
+### NcPropertyHolder
 
 ```typescript
-// Property value holder descriptor
-interface NcPropertyValueHolder {
+// Property holder descriptor
+interface NcPropertyHolder {
     attribute NcPropertyId    id; // Property id
     attribute NcString    name; // Property name
     attribute NcName?    typeName; // Property type name. If null it means the type is any
@@ -45,21 +45,23 @@ interface NcPropertyValueHolder {
 ### NcObjectPropertiesHolder
 
 ```typescript
+// Object properties holder descriptor
 interface NcObjectPropertiesHolder {
     attribute NcRolePath    path; // Object role path
     attribute sequence<NcRolePath>    dependencyPaths; // Sequence of role paths which are a dependency for this object (helpful to inform clients which objects need to be restored together)
     attribute sequence<NcClassId>    allowedMembersClasses; // Sequence of class ids allowed as members of the block (non-block objects have this as an empty sequence)
-    attribute sequence<NcPropertyValueHolder>    values; // Object properties values
+    attribute sequence<NcPropertyHolder>    values; // Object properties values
     attribute NcBoolean    isRebuildable; // Describes if the object is rebuildable
 };
 ```
 
-### NcBulkValuesHolder
+### NcBulkPropertiesHolder
 
 ```typescript
-interface NcBulkValuesHolder {
+// Bulk properties holder descriptor
+interface NcBulkPropertiesHolder {
     attribute NcString?    validationFingerprint; // Optional vendor specific fingerprinting mechanism used for validation purposes
-    attribute sequence<NcObjectPropertiesHolder>    values; // Values by rolePath
+    attribute sequence<NcObjectPropertiesHolder>    values; // Object properties holders
 };
 ```
 
@@ -88,6 +90,7 @@ enum NcPropertyRestoreNoticeType {
 ### NcPropertyRestoreNotice
 
 ```typescript
+// Property restore notice descriptor
 interface NcPropertyRestoreNotice {
     attribute NcPropertyId    id;                           // Property id
     attribute NcName    name;                               // Property name
@@ -99,6 +102,7 @@ interface NcPropertyRestoreNotice {
 ### NcObjectPropertiesSetValidation
 
 ```typescript
+// Object properties set validation descriptor
 interface NcObjectPropertiesSetValidation {
     attribute NcRolePath    path;                                   // Object role path
     attribute NcRestoreValidationStatus    status;                  // Validation status
@@ -107,17 +111,19 @@ interface NcObjectPropertiesSetValidation {
 };
 ```
 
-### NcMethodResultBulkValuesHolder
+### NcMethodResultBulkPropertiesHolder
 
 ```typescript
-interface NcMethodResultBulkValuesHolder: NcMethodResult {
-    attribute NcBulkValuesHolder    value; // Bulk values holder value
+// Bulk properties holder method result
+interface NcMethodResultBulkPropertiesHolder: NcMethodResult {
+    attribute NcBulkPropertiesHolder    value; // Bulk properties holder value
 };
 ```
 
 ### NcMethodResultObjectPropertiesSetValidation
 
 ```typescript
+// Object properties set validation method result
 interface NcMethodResultObjectPropertiesSetValidation: NcMethodResult {
     attribute sequence<NcObjectPropertiesSetValidation>    value; // Object properties set path validations
 };
@@ -135,14 +141,14 @@ It also allows pre-validation of a data set before attempting these get and set 
 [control-class("1.3.3", "BulkPropertiesManager")] interface NcBulkPropertiesManager: NcManager {
 
     // Get bulk object properties by given path
-    [element("3m1")]    NcMethodResultBulkValuesHolder GetPropertiesByPath(
+    [element("3m1")]    NcMethodResultBulkPropertiesHolder GetPropertiesByPath(
         NcRolePath path,    // The target role path
         NcBoolean recurse    // If true will return properties on specified path and all the nested paths
     );
 
     // Validate bulk properties for setting by given paths
     [element("3m2")]    NcMethodResultObjectPropertiesSetValidation ValidateSetPropertiesByPath(
-        NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
+        NcBulkPropertiesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath path,    // The target role path
         NcBoolean recurse,    // If true will validate properties on target path and all the nested paths
         NcRestoreMode restoreMode  // Defines the restore mode to be applied
@@ -150,7 +156,7 @@ It also allows pre-validation of a data set before attempting these get and set 
 
     // Set bulk properties by given paths
     [element("3m3")]    NcMethodResultObjectPropertiesSetValidation SetPropertiesByPath(
-        NcBulkValuesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
+        NcBulkPropertiesHolder dataSet,    // The values offered (this may include read-only values and also paths which are not the target role path)
         NcRolePath path,     // The target role path
         NcBoolean recurse,    // If true will set properties on target path and all the nested paths
         NcRestoreMode restoreMode  // Defines the restore mode to be applied
