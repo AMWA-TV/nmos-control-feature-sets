@@ -32,7 +32,7 @@ enum NcRestoreMode {
 ### NcPropertyHolder
 
 ```typescript
-// Property value holder descriptor
+// Property holder descriptor
 interface NcPropertyHolder {
     attribute NcPropertyId    id; // Property id
     attribute NcString    name; // Property name

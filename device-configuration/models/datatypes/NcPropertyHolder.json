@@ -1,5 +1,5 @@
 {
-    "description": "Property value holder descriptor",
+    "description": "Property holder descriptor",
     "name": "NcPropertyHolder",
     "type": 2,
     "fields": [
