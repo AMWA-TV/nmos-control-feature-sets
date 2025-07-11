@@ -2,6 +2,8 @@
 
 Includes models for control classes and datatypes used for device configuration (see [NMOS IS-14](https://specs.amwa.tv/is-14/)).
 
+Some of the datatypes referenced are published in the [MS-05-02 framework](https://specs.amwa.tv/ms-05-02/latest/docs/Framework.html).
+
 - [NMOS Control Feature Sets: Device configuration](#nmos-control-feature-sets-device-configuration)
   - [Datatypes](#datatypes)
     - [NcRestoreMode](#ncrestoremode)
