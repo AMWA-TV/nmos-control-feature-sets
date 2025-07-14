@@ -144,6 +144,7 @@ It also allows pre-validation of a data set before attempting these get and set 
     [element("3m1")]    NcMethodResultBulkPropertiesHolder GetPropertiesByPath(
         NcRolePath path,    // The target role path
         NcBoolean recurse    // If true will return properties on specified path and all the nested paths
+        NcBoolean includeDescriptors    // If true, property holders returned will contain non-null property descriptors and for full backups the ClassManager role path will also be included
     );
 
     // Validate bulk properties for setting by given paths
