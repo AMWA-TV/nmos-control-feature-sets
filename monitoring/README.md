@@ -2,6 +2,8 @@
 
 Includes models for control classes and datatypes used for monitoring.
 
+Some of the datatypes referenced are published in the [MS-05-02 framework](https://specs.amwa.tv/ms-05-02/latest/docs/Framework.html).
+
 - [NMOS Control Feature Sets: Monitoring](#nmos-control-feature-sets-monitoring)
   - [Datatypes](#datatypes)
     - [NcOverallStatus](#ncoverallstatus)

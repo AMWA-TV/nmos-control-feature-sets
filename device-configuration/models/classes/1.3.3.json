@@ -33,6 +33,14 @@
           "isNullable": false,
           "isSequence": false,
           "constraints": null
+        },
+        {
+          "description": "If true, property holders returned will contain non-null property descriptors and for full backups the ClassManager role path will also be included",
+          "name": "includeDescriptors",
+          "typeName": "NcBoolean",
+          "isNullable": false,
+          "isSequence": false,
+          "constraints": null
         }
       ],
       "isDeprecated": false
