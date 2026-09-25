@@ -1,0 +1,12 @@
+{
+  "amwa_id": "NMOS-CONTROL-FEATURE-SETS",
+  "url": "https://specs.amwa.tv/nmos-control-feature-sets",
+  "name": "AMWA NMOS Control Feature Sets",
+  "status": "Continuing",
+  "repo_name": "nmos-control-feature-sets",
+  "alt_repo_name": "nmos-control-feature-sets",
+  "repo_url": "https://github.com/AMWA-TV/nmos-control-feature-sets",
+  "releases": null,
+  "default_branch": "main",
+  "show_in_index": false
+}
