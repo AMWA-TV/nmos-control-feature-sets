@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>https://specs.amwa.tv/new/nmos-control-feature-sets/latest/</loc>
+        <loc>https://specs.amwa.tv/nmos-control-feature-sets/latest/</loc>
       </url>
       <url>
-        <loc>https://specs.amwa.tv/new/nmos-control-feature-sets/latest/Overview/</loc>
+        <loc>https://specs.amwa.tv/nmos-control-feature-sets/latest/404/</loc>
       </url>
       <url>
-        <loc>https://specs.amwa.tv/new/nmos-control-feature-sets/latest/device-configuration/</loc>
+        <loc>https://specs.amwa.tv/nmos-control-feature-sets/latest/Overview/</loc>
       </url>
       <url>
-        <loc>https://specs.amwa.tv/new/nmos-control-feature-sets/latest/identification/</loc>
+        <loc>https://specs.amwa.tv/nmos-control-feature-sets/latest/device-configuration/</loc>
       </url>
       <url>
-        <loc>https://specs.amwa.tv/new/nmos-control-feature-sets/latest/monitoring/</loc>
+        <loc>https://specs.amwa.tv/nmos-control-feature-sets/latest/identification/</loc>
+      </url>
+      <url>
+        <loc>https://specs.amwa.tv/nmos-control-feature-sets/latest/monitoring/</loc>
       </url>
 </urlset>
