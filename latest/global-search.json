@@ -3,12 +3,6 @@
   "repository": "AMWA-TV/nmos-control-feature-sets",
   "documents": [
     {
-      "title": "Page not found",
-      "url": "https://specs.amwa.tv/nmos-control-feature-sets/latest/404/",
-      "text": "Page not found Page not found Page not found - AMWA NMOS Control Feature Sets Skip to content Page not found The page you requested could not be found. Return to the documentation home",
-      "repository": "AMWA-TV/nmos-control-feature-sets"
-    },
-    {
       "title": "AMWA NMOS Control Feature Sets",
       "url": "https://specs.amwa.tv/nmos-control-feature-sets/latest/Overview/",
       "text": "AMWA NMOS Control Feature Sets AMWA NMOS Control Feature Sets Feature-set index AMWA NMOS Control Feature Sets - AMWA NMOS Control Feature Sets Skip to content AMWA NMOS Control Feature Sets The control feature sets register contains optional models for features that devices may implement. Each feature set defines control classes, datatypes, or both, for use with the NMOS Control framework. Feature-set index Device configuration Identification Monitoring",
